@@ -1,14 +1,13 @@
 import React from "react";
 import { useApi } from "../Utilities/Hooks/useApi";
 import { productUrl } from "../Utilities/Constants/endpoints";
+import Loading from "../Components/Loading";
 
 function Home() {
     const { data, loading, error } = useApi(`${productUrl}`);
 
-    console.log(productUrl);
-
     if(loading) {
-        return <div>Loading</div>;
+        return <Loading key={loading}/>;
     };
 
     if(error) {
