@@ -19,6 +19,8 @@ export function useApi(url) {
             } catch(error) {
                 console.log(error);
                 setError(true);
+            } finally {
+                setLoading(false);
             }
         }
 

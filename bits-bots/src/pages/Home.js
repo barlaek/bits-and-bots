@@ -6,7 +6,7 @@ function Home() {
     const { data, loading, error } = useApi(`${productUrl}`);
 
     console.log(productUrl);
-    
+
     if(loading) {
         return <div>Loading</div>;
     };
@@ -16,7 +16,7 @@ function Home() {
     }
 
     return (
-        <div>
+        <div key={data}>
             Data loaded
         </div>
     );
