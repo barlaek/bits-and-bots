@@ -2,6 +2,7 @@ import React from 'react';
 import { useApi } from '../Utilities/Hooks/useApi';
 import { productUrl } from '../Utilities/Constants/endpoints';
 import Loading from '../Components/Loading';
+import Card from '../Components/Card';
 
 function Home() {
   const { data, loading, error } = useApi(`${productUrl}`);
@@ -14,7 +15,11 @@ function Home() {
     return <div>Error</div>;
   }
 
-  return <div key={data}>Data loaded</div>;
+  return (
+    <div>
+      <Card data={data} />
+    </div>
+  );
 }
 
 export default Home;
