@@ -25,4 +25,5 @@ export const Data = styled.div`
     display: flex;
     flex-direction: column;
     min-width: 200px;
+    height: 170px;
 `;

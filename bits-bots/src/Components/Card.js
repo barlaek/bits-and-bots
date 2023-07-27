@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import * as styled from "./Card.styles.js";
 
 function Card(props) {
@@ -9,6 +10,7 @@ function Card(props) {
         <styled.Data>
           <h3 key={prop.name}>{prop.name}</h3>
           <h3>${prop.prices.sale_price}</h3>
+          <Link to={`/${prop.id}`}>View details</Link>
         </styled.Data>
       </styled.Card>
     );
