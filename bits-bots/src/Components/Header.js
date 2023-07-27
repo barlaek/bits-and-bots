@@ -1,9 +1,10 @@
 import React from 'react';
+import img from '../apple-touch-icon.png';
 
 function Header() {
   return (
     <div>
-      <h1>I am the header</h1>
+      <img src={img} alt="logo" />
     </div>
   );
 }
