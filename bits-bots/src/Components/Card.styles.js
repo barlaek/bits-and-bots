@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Card = styled.div`
     color: #ffffff;
+    background-color: #383838;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,6 +12,7 @@ export const Card = styled.div`
     max-height: 150px;
     border: 1px solid #383838;
     border-radius: 5px;
+    margin: 10px auto;
 `;
 
 export const GameImage = styled.img`

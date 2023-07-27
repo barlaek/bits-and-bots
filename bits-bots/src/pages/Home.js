@@ -3,6 +3,7 @@ import { useApi } from '../Utilities/Hooks/useApi';
 import { productUrl } from '../Utilities/Constants/endpoints';
 import Loading from '../Components/Loading';
 import Card from '../Components/Card';
+import * as styled from "./Home.styles.js";
 
 function Home() {
   const { data, loading, error } = useApi(`${productUrl}`);
@@ -16,9 +17,9 @@ function Home() {
   }
 
   return (
-    <div>
+    <styled.Container>
       <Card data={data} />
-    </div>
+    </styled.Container>
   );
 }
 
