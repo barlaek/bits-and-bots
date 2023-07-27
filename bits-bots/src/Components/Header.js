@@ -11,8 +11,8 @@ function Header() {
       <styles.Header>
         <img src={logoIcon} alt="logo" />
         <styles.Ul>
-          <li><img src={profileIcon} alt='profile'/></li>
-          <li><img src={cartIcon} alt='cart' /></li>
+          <styles.Li><img src={profileIcon} alt='profile'/></styles.Li>
+          <styles.Li><img src={cartIcon} alt='cart' /></styles.Li>
         </styles.Ul>
       </styles.Header>
     </div>
