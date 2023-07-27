@@ -1,9 +1,10 @@
 import React from "react";
 
 function GameDetails(props) {
+    const details = props.data
     return (
         <div>
-            <h2>{props.name}</h2>
+            <h2>{details.name}</h2>
         </div>
     )
 }

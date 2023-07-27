@@ -7,7 +7,7 @@ import Loading from "../Components/Loading";
 
 function Details() {
     let { id } = useParams();
-    const { data, loading, error } = useApi(`${productUrl}/${id}`) 
+    const { data, loading, error } = useApi(`${productUrl}${id}`) 
 
     if (loading) {
         return <Loading key={loading} />;
