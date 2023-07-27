@@ -8,7 +8,7 @@ function Card(props) {
         <styled.GameImage src={prop.images[0].src} alt={prop.images[0].alt} />
         <styled.Data>
           <h3 key={prop.name}>{prop.name}</h3>
-          <p>${prop.prices.sale_price}</p>
+          <h3>${prop.prices.sale_price}</h3>
         </styled.Data>
       </styled.Card>
     );

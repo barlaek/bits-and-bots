@@ -6,13 +6,14 @@ export const Card = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10px;
     min-wdith: 350px;
     max-width: 350px;
     min-height: 150px;
     max-height: 150px;
     border: 1px solid #383838;
     border-radius: 5px;
-    margin: 10px auto;
+    margin: 15px auto;
 `;
 
 export const GameImage = styled.img`
@@ -23,4 +24,5 @@ export const GameImage = styled.img`
 export const Data = styled.div`
     display: flex;
     flex-direction: column;
+    min-width: 200px;
 `;
