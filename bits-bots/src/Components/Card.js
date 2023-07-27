@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import * as styled from "./Card.styles.js";
+import * as styled from './Card.styles.js';
 
 function Card(props) {
   const content = props.data.map((prop) => {
