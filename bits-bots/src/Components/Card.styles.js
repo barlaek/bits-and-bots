@@ -6,7 +6,7 @@ export const Card = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
     min-wdith: 350px;
     max-width: 350px;
     min-height: 150px;
