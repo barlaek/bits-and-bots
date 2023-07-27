@@ -1,15 +1,16 @@
 import React from 'react';
-import logo from '../apple-touch-icon.png';
-import profile from "../person_outline.svg";
+import logoIcon from '../images/apple-touch-icon.png';
+import profileIcon from "../images/person_outline.svg";
+import cartIcon from "../images/shopping_cart.svg";
 
 
 function Header() {
   return (
     <div>
-      <img src={logo} alt="logo" />
+      <img src={logoIcon} alt="logo" />
       <ul>
-        <li><img src={profile} alt='profile'/></li>
-        <li>Cart</li>
+        <li><img src={profileIcon} alt='profile'/></li>
+        <li><img src={cartIcon} alt='cart' /></li>
       </ul>
     </div>
   );
