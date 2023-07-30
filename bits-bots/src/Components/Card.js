@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import * as styled from './Card.styles.js';
 
 function Card(props) {
-  const content = props.data.map((prop) => {
+  const content = props.filteredProductList.map((prop) => {
     return (
       <styled.Card key={prop.name}>
         <styled.GameImage src={prop.images[0].src} alt={prop.images[0].alt} />
