@@ -1,5 +1,4 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import Return from './Return.js';
 import * as styled from './GameDetails.styles.js';
 
