@@ -1,19 +1,20 @@
-import React from "react";
+import React from 'react';
+import * as styled from "./FilterSelect.styles.js";
 
 const FilterSelect = (props) => {
-    function onFilterValueChanged(event) {
-        props.filterValueSelected(event.target.value);
-    }
+  function onFilterValueChanged(event) {
+    props.filterValueSelected(event.target.value);
+  }
 
-    return (
-        <div>
-            <select name="on_sale" onChange={onFilterValueChanged}>
-                <option value="all">All</option>
-                <option value="onSale">On Sale</option>
-                <option value="fullPrice">Full price</option>
-            </select>
-        </div>
-    )
-}
+  return (
+    <div>
+      <styled.Select name="on_sale" onChange={onFilterValueChanged}>
+        <option value="all">All</option>
+        <option value="onSale">On Sale</option>
+        <option value="fullPrice">Full price</option>
+      </styled.Select>
+    </div>
+  );
+};
 
 export default FilterSelect;

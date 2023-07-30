@@ -12,14 +12,14 @@ function Home() {
   const [filterTextValue, setFilterText] = useState('all');
 
   const filteredProductList = data.filter((product) => {
-    if(filterTextValue === "onSale") {
+    if (filterTextValue === 'onSale') {
       return product.on_sale === true;
-    } else if(!filterTextValue === "fullPrice") {
+    } else if (!filterTextValue === 'fullPrice') {
       return product.on_sale === false;
     } else {
       return product;
     }
-  })
+  });
 
   if (loading) {
     return <Loading key={loading} />;
@@ -30,15 +30,14 @@ function Home() {
   }
 
   function onFiltervalueSelected(filterValue) {
-    console.log(filterValue);
     setFilterText(filterValue);
   }
 
   return (
     <styled.Container>
-        <Filter label="Filter">
-          <FilterSelect filterValueSelected={onFiltervalueSelected} />
-        </Filter>
+      <Filter label="Filter">
+        <FilterSelect filterValueSelected={onFiltervalueSelected} />
+      </Filter>
       <Card filteredProductList={filteredProductList} />
     </styled.Container>
   );
