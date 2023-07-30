@@ -1,10 +1,10 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import Return from './Return.js';
 import * as styled from './GameDetails.styles.js';
 
 function GameDetails(props) {
   const details = props.data;
-  const history = useNavigate();
 
   // const gallery = details.images.map((image) => {
   //     return (
@@ -14,7 +14,7 @@ function GameDetails(props) {
 
   return (
     <div>
-      <styled.Return onClick={() => history(-1)}>Back</styled.Return>
+      <Return />
       <styled.Container>
         <div>
           <styled.Image src={details.images} alt="product image" />
