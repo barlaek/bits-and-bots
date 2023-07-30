@@ -6,6 +6,7 @@ import Card from '../Components/Card';
 import * as styled from './Home.styles.js';
 import Filter from '../Components/Filter';
 import FilterSelect from '../Components/FilterSelect';
+import Slider from '../Components/Slider';
 
 function Home() {
   const { data, loading, error } = useApi(`${productUrl}`);
@@ -21,6 +22,10 @@ function Home() {
     }
   });
 
+  const productImages = data.map((product) => {
+    return product.images;
+  })
+
   if (loading) {
     return <Loading key={loading} />;
   }
@@ -35,6 +40,7 @@ function Home() {
 
   return (
     <styled.Container>
+      <Slider productImages={productImages}/>
       <Filter label="Filter">
         <FilterSelect filterValueSelected={onFiltervalueSelected} />
       </Filter>
