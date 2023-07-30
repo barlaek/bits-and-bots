@@ -5,12 +5,6 @@ import * as styled from './GameDetails.styles.js';
 function GameDetails(props) {
   const details = props.data;
 
-  // const gallery = details.images.map((image) => {
-  //     return (
-  //         <img src={image.src} alt={image.alt} />
-  //     )
-  // })
-
   return (
     <div>
       <Return />

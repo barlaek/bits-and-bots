@@ -5,7 +5,7 @@ export const Header = styled.header`
   background-color: #383838;
   margin: 0 auto;
   width: 100%;
-  height: 90px;
+  height: 75px;
 `;
 
 export const Ul = styled.ul`
