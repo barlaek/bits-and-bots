@@ -7,10 +7,10 @@ const FilterSelect = (props) => {
 
     return (
         <div>
-            <select name="onSale" onChange={onFilterValueChanged}>
+            <select name="on_sale" onChange={onFilterValueChanged}>
                 <option value="all">All</option>
-                <option value={true}>On Sale</option>
-                <option value={false}>Full price</option>
+                <option value="onSale">On Sale</option>
+                <option value="fullPrice">Full price</option>
             </select>
         </div>
     )

@@ -12,9 +12,9 @@ function Home() {
   const [filterTextValue, setFilterText] = useState('all');
 
   const filteredProductList = data.filter((product) => {
-    if(filterTextValue.on_sale === true) {
+    if(filterTextValue === "onSale") {
       return product.on_sale === true;
-    } else if(!filterTextValue.on_sale === false) {
+    } else if(!filterTextValue === "fullPrice") {
       return product.on_sale === false;
     } else {
       return product;
