@@ -21,7 +21,6 @@ function Home() {
     <styled.Container>
       <div>
         <Filter label="Filter">
-          <h2>Sup bro</h2>
         </Filter>
       </div>
       <Card data={data} />
