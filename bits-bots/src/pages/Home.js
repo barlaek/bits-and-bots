@@ -22,11 +22,13 @@ function Home() {
     }
   });
 
-  const productImages = data.map((product) => {
+  const productOnSale = data.map((product) => {
     if(product.on_sale === true) {
-      console.log(product.images);
+      return product.images;
     }
   })
+
+  console.log(productOnSale);
 
   if (loading) {
     return <Loading key={loading} />;
@@ -42,7 +44,7 @@ function Home() {
 
   return (
     <styled.Container>
-      <Slider productImages={productImages}/>
+      <Slider productOnSale={productOnSale}/>
       <Filter label="Filter">
         <FilterSelect filterValueSelected={onFiltervalueSelected} />
       </Filter>
