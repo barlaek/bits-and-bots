@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import * as styled from "./Slider.styles.js";
 
 const Slider = (props) => {
-    const [imageIndex, setImageIndex] = useState("");
+    const [imageIndex, setImageIndex] = useState(0);
 
     return (
         <styled.Container>
