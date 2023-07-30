@@ -1,10 +1,14 @@
 import styled from 'styled-components';
 
+export const Container = styled.div`
+  background-color: #383838;
+  height: 75px;
+`;
+
 export const Header = styled.header`
   display: flex;
-  background-color: #383838;
   margin: 0 auto;
-  width: 100%;
+  width: 350px;
   height: 75px;
 `;
 

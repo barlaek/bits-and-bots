@@ -6,7 +6,7 @@ import * as styles from './Header.styles.js';
 
 function Header() {
   return (
-    <div>
+    <styles.Container>
       <styles.Header>
         <img src={logoIcon} alt="logo" />
         <styles.Ul>
@@ -18,7 +18,7 @@ function Header() {
           </styles.Li>
         </styles.Ul>
       </styles.Header>
-    </div>
+    </styles.Container>
   );
 }
 
