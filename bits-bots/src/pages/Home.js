@@ -23,7 +23,9 @@ function Home() {
   });
 
   const productImages = data.map((product) => {
-    return product.images;
+    if(product.on_sale === true) {
+      console.log(product.images);
+    }
   })
 
   if (loading) {

@@ -6,7 +6,7 @@ const Slider = (props) => {
 
     return (
         <styled.Container>
-            <styled.ImageContainer src={props[imageIndex].src} /> 
+            <styled.ImageContainer src={props[imageIndex]} /> 
         </styled.Container>
     )
 }
