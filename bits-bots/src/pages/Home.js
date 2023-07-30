@@ -28,7 +28,7 @@ function Home() {
     }
   })
 
-  console.log(productOnSale);
+  console.log(productOnSale[0]);
 
   if (loading) {
     return <Loading key={loading} />;
@@ -44,7 +44,7 @@ function Home() {
 
   return (
     <styled.Container>
-      <Slider productOnSale={productOnSale}/>
+      <Slider productOnSale={productOnSale[0]}/>
       <Filter label="Filter">
         <FilterSelect filterValueSelected={onFiltervalueSelected} />
       </Filter>
