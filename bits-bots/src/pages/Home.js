@@ -30,7 +30,7 @@ function Home() {
 
   console.log(productOnSale);
 
-  const bannerProduct = productOnSale[0];
+  const bannerProduct = productOnSale;
   console.log(bannerProduct);
 
   if (loading) {
