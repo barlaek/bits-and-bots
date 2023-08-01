@@ -15,7 +15,7 @@ function Home() {
   const filteredProductList = data.filter((product) => {
     if (filterTextValue === 'onSale') {
       return product.on_sale === true;
-    } else if (!filterTextValue === 'fullPrice') {
+    } else if (filterTextValue === 'fullPrice') {
       return product.on_sale === false;
     } else {
       return product;
