@@ -1,18 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import * as styled from "./Slider.styles.js";
 
 const Slider = (bannerProduct) => {
-    // const [imageIndex, setImageIndex] = useState(0);
-    // const banner = bannerProduct.map((prop) => {
-    //     return (
-    //         <styled.Container key={prop.name}>
-    //             <styled.ImageContainer src={prop.images[0].src} alt={prop} />
-    //         </styled.Container>
-    //     )
+    // const hero = bannerProduct.map((images) => {
+    //     return images;
     // })
 
     return (
-        <styled.Container></styled.Container>
+        <styled.Container>
+            <styled.ImageContainer src={bannerProduct.src} alt={bannerProduct.alt} />
+        </styled.Container>
     )
 }
 
