@@ -6,9 +6,13 @@ const Slider = (bannerProduct) => {
     //     return images;
     // })
 
+    const hero = bannerProduct.bannerProduct.map((images) => {
+        return <styled.ImageContainer key={images.name} src={images.src} alt={images.alt} />
+    })
+
     return (
-        <styled.Container>
-            <styled.ImageContainer src={bannerProduct.src} alt={bannerProduct.alt} />
+        <styled.Container key={hero.name}>
+            {hero}
         </styled.Container>
     )
 }
