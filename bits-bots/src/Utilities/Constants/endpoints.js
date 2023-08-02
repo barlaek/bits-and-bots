@@ -3,7 +3,6 @@ export const productUrl =
 
 const testUrl = 'https://flowersforschool.one/flower-power/wp-json';
 
-
 async function data() {
   const response = await fetch(`${testUrl}`);
   console.log(response);
