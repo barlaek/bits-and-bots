@@ -30,7 +30,7 @@ function Home() {
 
   const productOnSale = data.filter((product) => {
     if(product.on_sale === true) {
-      return {product};
+      return product;
     }
   }).map((product) => {
     return product.images[0];
