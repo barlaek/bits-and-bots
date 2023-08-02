@@ -1,7 +1,7 @@
 import React from "react";
 import * as styled from "./Slider.styles.js";
 
-const Slider = ({bannerProduct}) => {
+const Slider = (bannerProduct) => {
     // const hero = bannerProduct.map((images) => {
     //     return images;
     // })
