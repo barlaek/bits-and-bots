@@ -8,21 +8,21 @@ const Slider = (children) => {
 
     const images = children.bannerProduct.map((images) => {
         return <styled.Image key={images.name} src={images.src} alt={images.alt} />
-    })
+    });
 
     const next = () => {
         setImageIndex((state) => (state += 1));
         if (imageIndex === children.length -1){
             setImageIndex(0);   
         }
-    }
+    };
 
     const previous = () => {
         setImageIndex((state => state -= 1));
         if (imageIndex === 0) {
             setImageIndex(children.length -1)
         }  
-    }
+    };
     return (
         <styled.Container>
             {images}
