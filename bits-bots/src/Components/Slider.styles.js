@@ -48,6 +48,30 @@ export const Image = styled.img`
     object-fit: cover;
 `;
 
+export const ArrowButton = styled.button`
+	background-color: transparent;
+    border: none;
+    position: absolute;
+    cursor: pointer;
+    top: calc(50% - 0.5 * 3rem);
+    padding: 0;
+    display: flex;
+    justify-content: center;
+	z-index: 3;
+`;
+
+export const PreviousButton = styled(ArrowButton)`
+	left: 0;
+`;
+
+export const NextButton = styled(ArrowButton)`
+	right: 0;
+`;
+
+export const Arrow = styled.i`
+	font-size: 5rem;
+`;
+
 // export const NavButton = styled.button`
 //     width: 35px;
 //     height: 35px;

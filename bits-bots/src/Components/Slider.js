@@ -1,4 +1,6 @@
-import React, { Children, useState } from "react";
+import React, { useState } from "react";
+import chevron_right from "../images/chevron_right.svg";
+import chevron_left from "../images/chevron_left.svg";
 import * as styled from "./Slider.styles.js";
 
 const Slider = (children) => {
@@ -40,6 +42,12 @@ const Slider = (children) => {
             <styled.CarouselImages position={position}>
                 {hero}
             </styled.CarouselImages>
+            <styled.PreviousButton onClick={() => handlePreviousClick()}>
+                    <img src={chevron_left} alt="arrow"/>
+				</styled.PreviousButton>
+				<styled.NextButton onClick={() => handleNextClick()}>
+					<img src={chevron_right} alt="arrow"/>
+				</styled.NextButton>
         </styled.Container>
     )
 }
