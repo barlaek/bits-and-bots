@@ -11,14 +11,14 @@ const Slider = (children) => {
     })
 
     const next = () => {
-        setImageIndex(state => state += 1);
+        setImageIndex((state) => (state += 1));
         if (imageIndex === children.length -1){
             setImageIndex(0);   
         }
     }
 
     const previous = () => {
-        setImageIndex(state => state -= 1);
+        setImageIndex((state => state -= 1));
         if (imageIndex === 0) {
             setImageIndex(children.length -1)
         }  
