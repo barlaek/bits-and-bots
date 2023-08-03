@@ -50,9 +50,10 @@ function Home() {
 
   return (
     <styled.Container>
-      <Gallery children={<Slider bannerProduct={bannerProduct}/>}>
+      {/* <Gallery>
         <Slider bannerProduct={bannerProduct}/>
-      </Gallery>
+      </Gallery> */}
+      <Slider bannerProduct={bannerProduct} />
       <Filter label="Filter">
         <FilterSelect filterValueSelected={onFiltervalueSelected} />
       </Filter>
