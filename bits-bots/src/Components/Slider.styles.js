@@ -2,10 +2,14 @@ import styled, { css } from "styled-components";
 
 
 export const Container = styled.div`
-    width: 100vw;
-    height: 100px;
+    min-width: 350px;
+    min-height: 150px;
+    max-width: 350px;
+    min-height: 150px;
     position relative;
     display: flex;
+    margin: 10px auto 0 auto;
+    overflow: hidden;
 `;
 
 export const Image = styled.img`
