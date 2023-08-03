@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import chevron_right from ".";
-import chevron_left from ".../images/chevron_left.svg";
+import chevron_right from "./../../images/chevron_right.svg";
+import chevron_left from "./../../images/chevron_left.svg";
 import * as styled from "./Gallery.styles.js";
 
-const Gallery = (children) => {
+const Gallery = ({children}) => {
     const [position, setPosition] = useState(0);
     const directions = {
         NEXT: "next",
