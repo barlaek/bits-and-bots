@@ -10,6 +10,8 @@ const Slider = (children) => {
         return <styled.Image key={images.name} src={images.src} alt={images.alt} />
     });
 
+    // console.log(children.bannerProduct[imageIndex].src)
+
     const next = () => {
         setImageIndex((state) => (state += 1));
         if (imageIndex === children.length -1){
@@ -25,7 +27,7 @@ const Slider = (children) => {
     };
     return (
         <styled.Container>
-            {images}
+            <styled.Image src={children.bannerProduct[imageIndex].src} alt="stupid" />
             <styled.NavButton right onClick={next}>
                 <img src={chevronRight} alt="right arrow"/>
             </styled.NavButton>
