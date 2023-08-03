@@ -7,6 +7,7 @@ import * as styled from './Home.styles.js';
 import Filter from '../Components/Filter';
 import FilterSelect from '../Components/FilterSelect';
 import Slider from '../Components/Slider';
+import Gallery from "../Utilities/Gallery/Gallery"
 
 function Home() {
   const { data, loading, error } = useApi(`${productUrl}`);
@@ -21,12 +22,6 @@ function Home() {
       return product;
     }
   });
-
-  // const productOnSale = data.map((product) => {
-  //   if(product.on_sale === true) {
-  //     return product.images;
-  //   }
-  // });
 
   const productOnSale = data.filter((product) => {
     if(product.on_sale === true) {
