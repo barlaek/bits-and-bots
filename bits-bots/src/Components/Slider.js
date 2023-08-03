@@ -43,10 +43,10 @@ const Slider = (children) => {
                 {hero}
             </styled.CarouselImages>
             <styled.PreviousButton onClick={() => handlePreviousClick()}>
-                    <img src={chevron_left} alt="arrow"/>
+                    <styled.Arrow src={chevron_left} alt="left arrow"/>
 				</styled.PreviousButton>
 				<styled.NextButton onClick={() => handleNextClick()}>
-					<img src={chevron_right} alt="arrow"/>
+					<styled.Arrow src={chevron_right} alt="right-arrow"/>
 				</styled.NextButton>
         </styled.Container>
     )
