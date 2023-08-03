@@ -38,7 +38,7 @@ const Slider = (children) => {
     })
 
     return (
-        <styled.Container hasMultipleImages={children.length > 1}>
+        <styled.Container hasmultipleimages={children.length > 1}>
             <styled.CarouselImages position={position}>
                 {hero}
             </styled.CarouselImages>

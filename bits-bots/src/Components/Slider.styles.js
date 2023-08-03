@@ -5,8 +5,8 @@ export const Container = styled.div`
     height: 150px;
     postion: relative;
 
-    ${({ hasMultipleImages }) => {
-        if (hasMultipleImages) {
+    ${({ hasmultipleimages }) => {
+        if (hasmultipleimages) {
             return `
                 &:before {
                     background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
