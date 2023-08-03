@@ -24,17 +24,6 @@ const Slider = (children) => {
         }  
     }
     return (
-        // <styled.Container array={children.length > 1}>
-        //     <styled.CarouselImages position={position}>
-        //         {hero}
-        //     </styled.CarouselImages>
-        //     <styled.PreviousButton onClick={() => handlePreviousClick()}>
-        //             <styled.Arrow src={chevron_left} alt="left arrow"/>
-		// 		</styled.PreviousButton>
-		// 		<styled.NextButton onClick={() => handleNextClick()}>
-		// 			<styled.Arrow src={chevron_right} alt="right-arrow"/>
-		// 		</styled.NextButton>
-        // </styled.Container>
         <styled.Container>
             {images}
             <styled.NavButton right onClick={next}>
