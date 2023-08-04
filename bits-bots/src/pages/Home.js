@@ -32,9 +32,6 @@ function Home() {
     }
   })
 
-  // console.log(productOnSale);
-
-  // const bannerProduct = productOnSale;
   console.log(productOnSale);
 
   if (loading) {
