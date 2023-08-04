@@ -21,7 +21,8 @@ const Slider = (children) => {
     };
     return (
         <styled.Container>
-            <styled.Image src={children.bannerProduct[imageIndex].src} alt={children.bannerProduct[imageIndex].alt} />
+            {/* <styled.Image src={children.bannerProduct[imageIndex].src} alt={children.bannerProduct[imageIndex].alt} /> */}
+            <styled.Image src="" alt="" />
             <styled.NavButton right onClick={next}>
                 <img src={chevronRight} alt="right arrow"/>
             </styled.NavButton>
