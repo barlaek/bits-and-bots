@@ -7,4 +7,5 @@ export const Select = styled.select`
     border: none;
     padding: 5px 0;
     margin-top: 5px;
+    border-radius: 3px;
 `;
