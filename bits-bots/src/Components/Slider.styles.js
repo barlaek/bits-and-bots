@@ -35,3 +35,13 @@ export const NavButton = styled.button`
     transform: translate(0, -50%);
     ${(props) => props.right === true ? css` right: 2%` : css`left: 2%`}
 `;
+
+export const Title = styled.h1`
+    font-size: 20px;
+    color: #fff;
+    position: absolute;
+    top: 42%;
+    background-color: #FF6B87;
+    padding: 10px 30px;
+    left: 5%
+`;
