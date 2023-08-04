@@ -7,7 +7,6 @@ import * as styled from './Home.styles.js';
 import Filter from '../Components/Filter';
 import FilterSelect from '../Components/FilterSelect';
 import Slider from '../Components/Slider';
-import Gallery from "../Utilities/Gallery/Gallery"
 
 function Home() {
   const { data, loading, error } = useApi(`${productUrl}`);
@@ -27,8 +26,6 @@ function Home() {
     if(product.on_sale === true) {
       return {product};
     }
-  }).map((product) => {
-    return product.images[0];
   })
 
   console.log(productOnSale);
@@ -50,9 +47,6 @@ function Home() {
 
   return (
     <styled.Container>
-      {/* <Gallery>
-        <Slider bannerProduct={bannerProduct}/>
-      </Gallery> */}
       <Slider bannerProduct={bannerProduct} />
       <Filter label="Filter">
         <FilterSelect filterValueSelected={onFiltervalueSelected} />
