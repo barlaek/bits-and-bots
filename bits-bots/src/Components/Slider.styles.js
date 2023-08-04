@@ -37,11 +37,11 @@ export const NavButton = styled.button`
 `;
 
 export const Title = styled.h1`
-    font-size: 20px;
+    font-size: 18px;
     color: #fff;
     position: absolute;
     top: 42%;
     background-color: #FF6B87;
-    padding: 10px 30px;
+    padding: 7px 20px;
     left: 5%
 `;

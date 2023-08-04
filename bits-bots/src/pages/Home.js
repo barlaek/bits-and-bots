@@ -27,12 +27,12 @@ function Home() {
       return {product};
     }
   }).map((product) => {
-    if(product.on_sale === true) {
-      return product.images[0];
-    }
-  })
+        if(product.on_sale === true) {
+          return product.images[0];
+        }
+      })
 
-  console.log(productOnSale);
+  console.log(data);
 
   if (loading) {
     return <Loading key={loading} />;
