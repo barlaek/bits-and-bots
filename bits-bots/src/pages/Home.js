@@ -26,13 +26,9 @@ function Home() {
     if(product.on_sale === true) {
       return {product};
     }
-  }).map((product) => {
-        if(product.on_sale === true) {
-          return product.images[0];
-        }
-      })
+  })
 
-  console.log(data);
+  console.log(productOnSale);
 
   if (loading) {
     return <Loading key={loading} />;
