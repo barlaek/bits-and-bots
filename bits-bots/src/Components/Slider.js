@@ -6,15 +6,9 @@ import * as styled from "./Slider.styles.js";
 const Slider = (children) => {
     const [imageIndex, setImageIndex] = useState(0);
 
-    const images = children.bannerProduct.map((images) => {
-        return <styled.Image key={images.name} src={images.src} alt={images.alt} />
-    });
-
-    // console.log(children.bannerProduct[imageIndex].src)
-
     const next = () => {
         setImageIndex((state) => (state += 1));
-        if (imageIndex === children.length -1){
+        if (imageIndex === children.length - 1){
             setImageIndex(0);   
         }
     };
@@ -22,7 +16,7 @@ const Slider = (children) => {
     const previous = () => {
         setImageIndex((state => state -= 1));
         if (imageIndex === 0) {
-            setImageIndex(children.length -1)
+            setImageIndex(children.length - 1)
         }  
     };
     return (
