@@ -10,7 +10,7 @@ function Card(props) {
         <styled.Data>
           <h3 key={prop.name}>{prop.name}</h3>
           <h3>${prop.prices.sale_price}</h3>
-          <Link to={`${prop.id}`} style={{ color: "#fff" }}>View details</Link>
+          <Link to={`${prop.id}`} style={{ color: "#fff", hover: "cursor" }}>View details</Link>
         </styled.Data>
       </styled.Card>
     );
