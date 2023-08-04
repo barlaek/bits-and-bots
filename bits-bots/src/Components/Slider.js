@@ -5,10 +5,11 @@ import * as styled from "./Slider.styles.js";
 
 const Slider = (children) => {
     const [imageIndex, setImageIndex] = useState(0);
+    const data = children.productOnSale;
 
     const next = () => {
         setImageIndex((state) => (state += 1));
-        if (imageIndex === children.length - 1){
+        if (imageIndex === data.length - 1){
             setImageIndex(0);   
         }
     };
@@ -16,13 +17,15 @@ const Slider = (children) => {
     const previous = () => {
         setImageIndex((state => state -= 1));
         if (imageIndex === 0) {
-            setImageIndex(children.length - 1)
+            setImageIndex(data.length - 1)
         }  
     };
+
+    console.log(data)
     return (
         <styled.Container>
             {/* <styled.Image src={children.bannerProduct[imageIndex].src} alt={children.bannerProduct[imageIndex].alt} /> */}
-            <styled.Image src="" alt="" />
+            <styled.Image src={data[imageIndex].src} alt={data[imageIndex].alt} />
             <styled.NavButton right onClick={next}>
                 <img src={chevronRight} alt="right arrow"/>
             </styled.NavButton>

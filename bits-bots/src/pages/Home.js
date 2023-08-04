@@ -26,12 +26,16 @@ function Home() {
     if(product.on_sale === true) {
       return {product};
     }
+  }).map((product) => {
+    if(product.on_sale === true) {
+      return product.images[0];
+    }
   })
 
-  console.log(productOnSale);
+  // console.log(productOnSale);
 
-  const bannerProduct = productOnSale;
-  console.log(bannerProduct);
+  // const bannerProduct = productOnSale;
+  console.log(productOnSale);
 
   if (loading) {
     return <Loading key={loading} />;
@@ -47,7 +51,7 @@ function Home() {
 
   return (
     <styled.Container>
-      <Slider bannerProduct={bannerProduct} />
+      <Slider productOnSale={productOnSale} />
       <Filter label="Filter">
         <FilterSelect filterValueSelected={onFiltervalueSelected} />
       </Filter>
