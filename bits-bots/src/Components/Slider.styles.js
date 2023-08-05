@@ -28,7 +28,7 @@ export const NavButton = styled.button`
     cursor: pointer;
     padding: 0;
     position: absolute;
-    top: 33%;
+    top: 220px;
     border-radius: 50%;
     color: white;
     box-shadow: 0px 4px 60px 20px rgba(3,3,3,0.9), inset 0 --3em 3em rgba(3,3,3,0.5);
@@ -40,8 +40,8 @@ export const Title = styled.h1`
     font-size: 18px;
     color: #fff;
     position: absolute;
-    top: 42%;
+    top: 280px;
     background-color: #FF6B87;
     padding: 7px 20px;
-    left: 5%
+    left: 2%
 `;
