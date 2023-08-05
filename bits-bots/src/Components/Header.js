@@ -3,12 +3,19 @@ import logoIcon from '../images/apple-touch-icon.png';
 import profileIcon from '../images/person_outline.svg';
 import cartIcon from '../images/shopping_cart.svg';
 import * as styles from './Header.styles.js';
+import { useNavigate } from 'react-router-dom';
 
 function Header() {
+  const home = useNavigate();
+  const handleClick = () => {
+    home("/");
+  }
   return (
     <styles.Container>
       <styles.Header>
-        <img src={logoIcon} alt="logo" />
+        <styles.HomeBtn onClick={handleClick}>
+          <styles.LogoBtn src={logoIcon} alt="logo" />
+        </styles.HomeBtn>
         <styles.Ul>
           <styles.Li>
             <img src={profileIcon} alt="profile" />

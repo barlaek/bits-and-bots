@@ -12,6 +12,20 @@ export const Header = styled.header`
   height: 75px;
 `;
 
+export const HomeBtn = styled.button`
+  display: flex;
+  align-items: center;
+  background-color: #383838;
+  border: none;
+`;
+
+export const LogoBtn = styled.img`
+  height: 65px;
+  border: 1px solid #01F9C6;
+  border-radius: 5px;
+  margin: auto;
+`;
+
 export const Ul = styled.ul`
   display: flex;
   list-style-type: none;
