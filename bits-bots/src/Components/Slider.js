@@ -22,7 +22,9 @@ const Slider = (children) => {
         )
     })
 
-    console.log(id)
+    let route = children.productOnSale.map((id) => {
+        return id.id;
+    })
 
     const next = () => {
         setImageIndex((state) => (state += 1));
@@ -42,7 +44,7 @@ const Slider = (children) => {
     return (
         <styled.Container>
                  {id[imageIndex]}
-                 <Link to={`${id[imageIndex]}`}>
+                 <Link to={`${route[imageIndex]}`}>
                     {data[imageIndex]}
                  </Link>
                  <styled.NavButton right onClick={next}>
