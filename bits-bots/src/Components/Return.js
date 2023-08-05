@@ -5,7 +5,7 @@ import * as styled from './Return.styles.js';
 function Return() {
   const history = useNavigate();
 
-  return <styled.Return onClick={() => history(-1)}>Back</styled.Return>;
+  return <styled.Return onClick={() => history("/")}>Back</styled.Return>;
 }
 
 export default Return;
