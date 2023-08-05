@@ -27,13 +27,16 @@ export const LogoBtn = styled.img`
 `;
 
 export const Ul = styled.ul`
-  display: flex;
+  // display: flex;
+  // align-items: center;
+  display: inline-block;
   list-style-type: none;
-  align-items: center;
-  margin-left: 33%;
+  margin-left: 40%;
+  margin-top: 7%
 `;
 
 export const Li = styled.li`
+  display: inline-block;
   margin: 0 auto;
-  padding: 1rem;
+  padding-left: 10px
 `;
