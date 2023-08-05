@@ -31,13 +31,12 @@ export const Ul = styled.ul`
   // align-items: center;
   display: inline-block;
   list-style-type: none;
-  margin-left: 30%;
+  margin-left: 40%;
   margin-top: 7%
 `;
 
 export const Li = styled.li`
   display: inline-block;
-  margin: 0 auto;
-  padding-left: 10px;
+  margin: 0 5px;
   position: relative;
 `;
