@@ -18,7 +18,7 @@ function Home() {
     } else if (filterTextValue === 'fullPrice') {
       return product.on_sale === false;
     } else {
-      return {product};
+      return product;
     }
   });
 

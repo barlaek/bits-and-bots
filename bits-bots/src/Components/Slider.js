@@ -9,6 +9,8 @@ const Slider = (children) => {
     let data = children.productOnSale.map((product) => {
         if(product.on_sale === true) {
           return product.images[0];
+        } else {
+            return null;
         }
       })
 
@@ -35,16 +37,16 @@ const Slider = (children) => {
     console.log(data);
     return (
         <styled.Container>
-            {/* <Link to={`${id[imageIndex]}`}> */}
-                <styled.Title>Titles on sale:</styled.Title>
-                <styled.Image src="" alt="" />
+            <Link to={`${id[imageIndex]}`}>
+                <styled.Title>Titles on sale: {data[imageIndex].name}</styled.Title>
+                <styled.Image src={data[imageIndex].src} alt={data[imageIndex].alt} />
                 <styled.NavButton right onClick={next}>
                     <img src={chevronRight} alt="right arrow"/>
                 </styled.NavButton>
                 <styled.NavButton onClick={previous}>
                     <img src={chevronLeft} alt="left arrow"/>
                 </styled.NavButton>
-            {/* </Link> */}
+            </Link>
         </styled.Container>
     )
 }
