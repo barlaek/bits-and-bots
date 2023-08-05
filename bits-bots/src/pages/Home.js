@@ -18,9 +18,11 @@ function Home() {
     } else if (filterTextValue === 'fullPrice') {
       return product.on_sale === false;
     } else {
-      return product;
+      return {product};
     }
   });
+
+  console.log(filteredProductList);
 
   const productOnSale = data.filter((product) => {
     if(product.on_sale === true) {

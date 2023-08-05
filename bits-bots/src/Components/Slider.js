@@ -36,8 +36,8 @@ const Slider = (children) => {
     return (
         <styled.Container>
             {/* <Link to={`${id[imageIndex]}`}> */}
-                <styled.Title>Titles on sale: {data[imageIndex].name}</styled.Title>
-                <styled.Image src={data[imageIndex].src} alt={data[imageIndex].alt} />
+                <styled.Title>Titles on sale:</styled.Title>
+                <styled.Image src="" alt="" />
                 <styled.NavButton right onClick={next}>
                     <img src={chevronRight} alt="right arrow"/>
                 </styled.NavButton>
