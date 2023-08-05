@@ -5,6 +5,7 @@ import cartIcon from '../images/shopping_cart.svg';
 import * as styles from './Header.styles.js';
 import { useNavigate } from 'react-router-dom';
 import Profile from './Profile';
+import ProfileSelect from './ProfileSelect';
 
 function Header() {
   const home = useNavigate();
@@ -20,7 +21,7 @@ function Header() {
         <styles.Ul>
           <styles.Li>
             <Profile label={<img src={profileIcon} alt="profile" />}>
-
+              <ProfileSelect />
             </Profile>
           </styles.Li>
           <styles.Li>

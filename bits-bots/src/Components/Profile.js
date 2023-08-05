@@ -9,10 +9,10 @@ const Profile = (props) => {
     }
 
     return (
-        <div>
+        <styled.Container>
             <styled.Profile onClick={toggle}>{props.label}</styled.Profile>
             {open && <div>{props.children}</div>}
-        </div>
+        </styled.Container>
     )
 }
 
