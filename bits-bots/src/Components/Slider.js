@@ -11,6 +11,8 @@ const Slider = (children) => {
           return (
                 <styled.Image src={product.images[0].src} alt={product.images[0].src} />
           )
+        } else {
+            return null;
         }
       })
 

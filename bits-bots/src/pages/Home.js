@@ -47,8 +47,6 @@ function Home() {
   return (
     <styled.Container>
       {!data ? <Loading key={loading} /> : <Slider productOnSale={productOnSale} />}
-      {/* // <Slider productOnSale={productOnSale} /> */}
-      {/* <Slider /> */}
       <Filter label="Filter">
         <FilterSelect filterValueSelected={onFiltervalueSelected} />
       </Filter>
