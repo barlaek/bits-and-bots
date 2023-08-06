@@ -17,6 +17,7 @@ export const HomeBtn = styled.button`
   align-items: center;
   background-color: #383838;
   border: none;
+  cursor: pointer;
 `;
 
 export const LogoBtn = styled.img`
@@ -24,6 +25,7 @@ export const LogoBtn = styled.img`
   border: 1px solid #01F9C6;
   border-radius: 5px;
   margin: auto;
+  cursor: pointer;
 `;
 
 export const Ul = styled.ul`
@@ -39,4 +41,5 @@ export const Li = styled.li`
   display: inline-block;
   margin: 0 5px;
   position: relative;
+  cursor: pointer;
 `;

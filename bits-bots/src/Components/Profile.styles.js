@@ -9,4 +9,5 @@ export const Container = styled.div`
 export const Profile = styled.button`
     border: none;
     background-color: #383838;
+    cursor: pointer;
 `;

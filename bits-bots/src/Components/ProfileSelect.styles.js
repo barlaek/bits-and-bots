@@ -15,4 +15,5 @@ export const Login = styled.button`
     color: white;
     padding: 5px 10px;
     border-radius: 5px;
+    cursor: pointer;
 `;
