@@ -14,11 +14,7 @@ function App() {
         <Route path="" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="/:id" element={<Details />} />
-          <Route path='/landing' element={<Routes>
-            <Route path='' element={<LandingLayout />}>
-              <Route path='/login' element={<Landing />}/>
-            </Route>
-          </Routes>}/>
+          <Route path='/landing' element={<Landing />} />
         </Route>
       </Routes>
     </div>
