@@ -1,9 +1,11 @@
 import React from "react";
 import * as styled from "./Landing.styles.js";
 
-function Landing() {
+const Landing = () => {
     return (
-        <styled.Container>Hello</styled.Container>
+        <styled.Container>
+            <h1>Hello</h1>
+        </styled.Container>
     )
 }
 
