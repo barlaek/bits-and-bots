@@ -7,8 +7,8 @@ const ProfileSelect = () => {
   const landing = useNavigate();
 
   const handleClick = () => {
-    landing("/landing")
-  }
+    landing('/landing');
+  };
 
   return (
     <styled.Container>
