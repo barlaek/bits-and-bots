@@ -40,6 +40,5 @@ export const Ul = styled.ul`
 export const Li = styled.li`
   display: inline-block;
   margin: 0 5px;
-  position: relative;
   cursor: pointer;
 `;

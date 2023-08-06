@@ -6,7 +6,7 @@ const ProfileSelect = () => {
 
   return (
     <styled.Container>
-      <styled.Login onClick={() => setOpen(true)}>Login</styled.Login>
+      <styled.Login>Login</styled.Login>
     </styled.Container>
   );
 };
