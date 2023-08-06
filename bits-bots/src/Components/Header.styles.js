@@ -33,7 +33,7 @@ export const Ul = styled.ul`
   // align-items: center;
   display: inline-block;
   list-style-type: none;
-  margin-left: 40%;
+  margin-left: 38%;
   margin-top: 7%;
 `;
 
