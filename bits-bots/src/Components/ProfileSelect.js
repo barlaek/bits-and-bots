@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Modal from './Modal.js';
 import * as styled from './ProfileSelect.styles.js';
 
-const ProfileSelect = (props) => {
+const ProfileSelect = () => {
+
   return (
     <styled.Container>
-      <styled.Login>Login</styled.Login>
+      <styled.Login onClick={() => setOpen(true)}>Login</styled.Login>
     </styled.Container>
   );
 };
