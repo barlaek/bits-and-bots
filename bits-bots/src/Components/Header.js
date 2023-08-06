@@ -10,8 +10,8 @@ import ProfileSelect from './ProfileSelect';
 function Header() {
   const home = useNavigate();
   const handleClick = () => {
-    home("/");
-  }
+    home('/');
+  };
   return (
     <styles.Container>
       <styles.Header>

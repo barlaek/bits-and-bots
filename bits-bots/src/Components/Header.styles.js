@@ -22,7 +22,7 @@ export const HomeBtn = styled.button`
 
 export const LogoBtn = styled.img`
   height: 65px;
-  border: 1px solid #01F9C6;
+  border: 1px solid #01f9c6;
   border-radius: 5px;
   margin: auto;
   cursor: pointer;
@@ -34,7 +34,7 @@ export const Ul = styled.ul`
   display: inline-block;
   list-style-type: none;
   margin-left: 40%;
-  margin-top: 7%
+  margin-top: 7%;
 `;
 
 export const Li = styled.li`

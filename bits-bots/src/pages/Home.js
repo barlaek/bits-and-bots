@@ -25,10 +25,10 @@ function Home() {
   console.log(filteredProductList);
 
   const productOnSale = data.filter((product) => {
-    if(product.on_sale === true) {
-      return {product};
+    if (product.on_sale === true) {
+      return { product };
     }
-  })
+  });
 
   console.log(productOnSale);
 
@@ -46,7 +46,11 @@ function Home() {
 
   return (
     <styled.Container>
-      {!data ? <Loading key={loading} /> : <Slider productOnSale={productOnSale} />}
+      {!data ? (
+        <Loading key={loading} />
+      ) : (
+        <Slider productOnSale={productOnSale} />
+      )}
       <Filter label="Filter">
         <FilterSelect filterValueSelected={onFiltervalueSelected} />
       </Filter>

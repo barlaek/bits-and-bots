@@ -1,5 +1,5 @@
 import React from 'react';
-import * as styled from "./FilterSelect.styles.js";
+import * as styled from './FilterSelect.styles.js';
 
 const FilterSelect = (props) => {
   function onFilterValueChanged(event) {
