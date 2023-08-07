@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import Modal from './Modal.js';
+import React from 'react';
 import * as styled from './ProfileSelect.styles.js';
 import { useNavigate } from 'react-router-dom';
 
