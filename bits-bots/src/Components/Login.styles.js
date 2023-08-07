@@ -8,6 +8,6 @@ export const Input = styled.input`
 
 `;
 
-export const LoginBtn = styled.button`
+export const LoginBtn = styled.input`
 
 `;

@@ -3,14 +3,6 @@ import Login from '../Components/Login.js';
 import * as styled from './Landing.styles.js';
 
 const Landing = () => {
-  const login = (e) => {
-    e.prevent.default();
-    const body = {
-      email: e.email.value,
-      password: e.password.value,
-    }
-    console.log(body)
-  }
   // const [login, setLogin] = useState(false);
   // const [register, setRegister] = useState(false);
 
@@ -35,7 +27,7 @@ const Landing = () => {
         </div> */}
         <h1>Log in</h1>
         <p>You must be logged in to use this application</p>
-        <Login login={login}/>
+        <Login />
       </styled.Container>
     </styled.Background>
   );
