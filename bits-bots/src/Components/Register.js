@@ -1,18 +1,18 @@
 import React from 'react';
-import * as styled from './Login.styles.js';
+import * as styled from './Register.styles.js';
 
-const Login = (props) => {
+const Register = (props) => {
   return (
     <styled.Container>
-      <h1>Log in to Bits & Bots</h1>
-      <p>You must be logged in to use this application</p>
+      <h1>Register an account</h1>
       <styled.Form>
+        <styled.Input type="text" placeholder='Username' />
         <styled.Input type="email" placeholder="Email address"/>
         <styled.Input type="password" placeholder='Password'/>
-        <styled.LoginBtn>Login</styled.LoginBtn>
+        <styled.RegBtn>Register</styled.RegBtn>
       </styled.Form>
     </styled.Container>
   );
 };
 
-export default Login;
+export default Register;

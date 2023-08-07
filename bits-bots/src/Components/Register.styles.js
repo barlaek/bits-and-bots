@@ -1,17 +1,17 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
 
 `;
 
 export const Form = styled.form`
-    
+
 `;
 
 export const Input = styled.input`
 
 `;
 
-export const LoginBtn = styled.button`
+export const RegBtn = styled.button`
 
 `;
