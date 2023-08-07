@@ -4,8 +4,13 @@ import Register from "../Components/Register.js";
 
 const Registration = () => {
     return (
-        <styled.Container>
-            <Register />
-        </styled.Container>
+        <styled.Background>
+            <styled.Container>
+                <h1>Register an account</h1>
+                <Register />
+            </styled.Container>
+        </styled.Background>
     )
 }
+
+export default Registration;

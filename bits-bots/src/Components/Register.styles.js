@@ -12,6 +12,6 @@ export const Input = styled.input`
 
 `;
 
-export const RegBtn = styled.button`
+export const RegBtn = styled.input`
 
 `;

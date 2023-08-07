@@ -22,7 +22,7 @@ const Register = () => {
         <p>{errors.email?.message}</p>
         <styled.Input type="password" placeholder='Password' {...register("password")}/>
         <p>{errors.password?.message}</p>
-        <styled.LoginBtn type='submit' value="Login"/>
+        <styled.RegBtn type='submit' value="Register account"/>
       </styled.Form>
   );
 };
