@@ -15,4 +15,5 @@ export const Filter = styled.button`
   padding: 5px;
   margin-top: 10px;
   border-radius: 3px;
+  cursor: pointer;
 `;

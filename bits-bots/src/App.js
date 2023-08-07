@@ -5,7 +5,7 @@ import Layout from './pages/Layout';
 import Home from './pages/Home';
 import Details from './pages/Details';
 import Landing from './pages/Landing';
-import Registration from "./pages/Registration";
+import Registration from './pages/Registration';
 
 function App() {
   return (

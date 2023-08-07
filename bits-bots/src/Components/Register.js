@@ -10,8 +10,8 @@ const Register = () => {
     handleSubmit,
     formState: { errors },
   } = useForm({
-    resolver: yupResolver(schema)
-  })
+    resolver: yupResolver(schema),
+  });
 
   function onSubmit(data) {
     const userBody = {
@@ -19,18 +19,25 @@ const Register = () => {
       password: data.password,
     };
 
-    localStorage.setItem("userBody", JSON.stringify(userBody));
+    localStorage.setItem('userBody', JSON.stringify(userBody));
     console.log(userBody);
-
   }
   return (
-      <styled.Form onSubmit={handleSubmit(onSubmit)}>
-        <styled.Input type="email" placeholder="Email address" {...register("email")}/>
-        <p>{errors.email?.message}</p>
-        <styled.Input type="password" placeholder='Password' {...register("password")}/>
-        <p>{errors.password?.message}</p>
-        <styled.RegBtn type='submit' value="Register account"/>
-      </styled.Form>
+    <styled.Form onSubmit={handleSubmit(onSubmit)}>
+      <styled.Input
+        type="email"
+        placeholder="Email address"
+        {...register('email')}
+      />
+      <p>{errors.email?.message}</p>
+      <styled.Input
+        type="password"
+        placeholder="Password"
+        {...register('password')}
+      />
+      <p>{errors.password?.message}</p>
+      <styled.RegBtn type="submit" value="Register account" />
+    </styled.Form>
   );
 };
 
