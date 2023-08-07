@@ -3,8 +3,11 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as styled from './Register.styles.js';
 import { schema } from '../Utilities/Constants/schema.js';
+import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
+  const navigate = useNavigate();
+  
   const {
     register,
     handleSubmit,
@@ -14,13 +17,16 @@ const Register = () => {
   });
 
   function onSubmit(data) {
-    const userBody = {
+    const user = {
       email: data.email,
       password: data.password,
     };
 
-    localStorage.setItem('userBody', JSON.stringify(userBody));
-    console.log(userBody);
+    localStorage.setItem('userBody', JSON.stringify(user));
+
+    setInterval(() => {
+      navigate("/landing");
+    }, 2000);
   }
   return (
     <styled.Form onSubmit={handleSubmit(onSubmit)}>

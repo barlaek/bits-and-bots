@@ -3,8 +3,13 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as styled from './Login.styles.js';
 import { schema } from '../Utilities/Constants/schema.js';
+import useStorage from '../Utilities/Hooks/useStorage.js';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
+  const navigate = useNavigate();
+  const { userBody } = useStorage();
+
   const {
     register,
     handleSubmit,
@@ -19,12 +24,11 @@ const Login = () => {
       password: data.password,
     };
 
-    const userBody = JSON.parse(localStorage.getItem('userBody'));
-
     console.log(userBody);
 
     if (user.email === userBody.email && user.password === userBody.password) {
       console.log('Success');
+      navigate("/");
     } else {
       console.log('who is you?');
     }
