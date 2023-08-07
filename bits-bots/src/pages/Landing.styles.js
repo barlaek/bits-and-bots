@@ -12,6 +12,11 @@ export const Container = styled.div`
   margin: 20px auto;
   color: white;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
-export const Login = styled.button``;
+export const p = styled.p`
+  widt: 240px;
+`;

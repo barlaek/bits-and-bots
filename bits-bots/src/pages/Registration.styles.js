@@ -6,12 +6,13 @@ export const Background = styled.div`
 `;
 
 export const Container = styled.div`
-  background-color: #383838;
-  width: 350px;
-  height: 400px;
-  margin: 20px auto;
-  color: white;
-  border-radius: 10px;
+background-color: #383838;
+width: 350px;
+height: 400px;
+margin: 20px auto;
+color: white;
+border-radius: 10px;
+display: flex;
+flex-direction: column;
+align-items: center;
 `;
-
-export const Login = styled.button``;
