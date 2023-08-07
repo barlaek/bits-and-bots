@@ -24,4 +24,5 @@ export const RegBtn = styled.input`
     border: none;
     border-radius: 3px;
     cursor: pointer;
+    font-weight: bold;
 `;

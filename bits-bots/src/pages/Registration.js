@@ -8,7 +8,7 @@ const Registration = () => {
         <styled.Background>
             <styled.Container>
                 <Tab />
-                <h1>Register an account</h1>
+                <h1>Register account</h1>
                 <Register />
             </styled.Container>
         </styled.Background>

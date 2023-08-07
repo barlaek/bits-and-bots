@@ -14,7 +14,14 @@ const Register = () => {
   })
 
   function onSubmit(data) {
-    console.log(data);
+    const userBody = {
+      email: data.email,
+      password: data.password,
+    };
+
+    localStorage.setItem("userBody", JSON.stringify(userBody));
+    console.log(userBody);
+
   }
   return (
       <styled.Form onSubmit={handleSubmit(onSubmit)}>
