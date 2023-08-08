@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as styled from './Login.styles.js';
@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const navigate = useNavigate();
-  const { currentUser } = useStorage();
+  const { userBody } = useStorage();
 
   const {
     register,
@@ -24,11 +24,11 @@ const Login = () => {
       password: data.password,
     };
 
-    checkAuth(user, currentUser);
+    checkAuth(user, userBody);
   }
 
   const checkAuth = (user, userBody) => {
-    if(user.email == userBody.email && user.password == userBody.password){
+    if(user.email === userBody.email && user.password === userBody.password){
       console.log("success");
       setTimeout(() => {
         navigate("/");

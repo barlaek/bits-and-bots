@@ -30,7 +30,7 @@ const Register = () => {
 
     setCurrentUser(localData);
 
-    if(localData) {
+    if(currentUser) {
       setTimeout(() => {
         navigate("/landing");
       }, 2000);
