@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import * as styled from './ProfileSelect.styles.js';
 import { useNavigate } from 'react-router-dom';
 import Logout from './Logout.js';
@@ -7,12 +7,19 @@ import useStorage from '../Utilities/Hooks/useStorage.js';
 
 const ProfileSelect = () => {
   // const { currentUser, setCurrentUser } = useContext(UserContext)
-  // const { userBody } = useStorage();
+  const [ loggedIn, setLoggedIn ] = useState(false);
+  const { userBody } = useStorage();
   const landing = useNavigate();
 
   const handleClick = () => {
     landing('/landing');
   };
+
+  // if(userBody) {
+  //   	setLoggedIn(!loggedIn);
+  // }
+
+  // console.log(loggedIn);
 
   // const isLoggedin = setCurrentUser(userBody);
   // let button;
