@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as styled from './Login.styles.js';
@@ -24,16 +24,42 @@ const Login = () => {
       password: data.password,
     };
 
-    console.log(userBody);
-
     if (user.email === userBody.email && user.password === userBody.password) {
-      setInterval(() => {
-        navigate("/");
-      }, 1000)
+      // setInterval(() => {
+      //   window.location.reload();
+      // }, 1000)
+      // useEffect(() => {
+      //   navigate("/")
+      // }, [navigate])
+      console.log("is this ok?")
     } else {
       console.log('who is you?');
     }
   }
+
+
+  // const onSubmit = (data) => {
+  //   const user = {
+  //     email: data.email,
+  //     password: data.password
+  //   }
+
+  //   return user;
+  // }
+
+  // const checkAuth = () => {
+  //   if(onSubmit.user.email === userBody.email && onSubmit.user.password === userBody.password) {
+  //     navigate("/")
+  //     console.log(onSubmit);
+  //   }
+  // }
+
+  // useEffect(() => {
+  //   window.addEventListener("storage", checkAuth);
+  //   return () => {
+  //     window.removeEventListener("storage", checkAuth);
+  //   }
+  // }, [])
   return (
     <styled.Form onSubmit={handleSubmit(onSubmit)}>
       <styled.Input
