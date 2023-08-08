@@ -24,47 +24,20 @@ const Login = () => {
       password: data.password,
     };
 
-    console.log(user, userBody);
-
-    if (user === userBody) {
-      // setInterval(() => {
-      //   window.location.reload();
-      // }, 1000)
-      // useEffect(() => {
-      //   navigate("/")
-      // }, [navigate])
-      // console.log("is this ok?")
-      // setInterval(() => {
-      //   navigate("/");
-      // }, 1000);
-    } else {
-      console.log('who is you?');
-    }
+    checkAuth(user, userBody);
   }
 
-
-  // const onSubmit = (data) => {
-  //   const user = {
-  //     email: data.email,
-  //     password: data.password
-  //   }
-
-  //   return user;
-  // }
-
-  // const checkAuth = () => {
-  //   if(onSubmit.user.email === userBody.email && onSubmit.user.password === userBody.password) {
-  //     navigate("/")
-  //     console.log(onSubmit);
-  //   }
-  // }
-
-  // useEffect(() => {
-  //   window.addEventListener("storage", checkAuth);
-  //   return () => {
-  //     window.removeEventListener("storage", checkAuth);
-  //   }
-  // }, [])
+  const checkAuth = (user, userBody) => {
+    if(user.email == userBody.email && user.password == userBody.password){
+      console.log("success");
+      setInterval(() => {
+        navigate("/");
+      }, 1000)
+    } else {
+      return false;
+    }
+  }
+  
   return (
     <styled.Form onSubmit={handleSubmit(onSubmit)}>
       <styled.Input
