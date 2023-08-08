@@ -11,7 +11,7 @@ import { UserContext } from './Utilities/Context/UserContext';
 
 function App() {
   const [ currentUser, setCurrentUser ] = useState(null);
-
+  console.log(currentUser);
   return (
     <div>
       <UserContext.Provider value={{currentUser, setCurrentUser}}>

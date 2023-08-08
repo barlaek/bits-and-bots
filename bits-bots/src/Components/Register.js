@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as styled from './Register.styles.js';
 import { schema } from '../Utilities/Constants/schema.js';
 import { useNavigate } from 'react-router-dom';
+import { UserContext } from '../Utilities/Context/UserContext.js';
 
 const Register = () => {
   const navigate = useNavigate();
+  const { currentUser, setCurrentUser } = useContext(UserContext);
   
   const {
     register,
@@ -24,9 +26,15 @@ const Register = () => {
 
     localStorage.setItem('userBody', JSON.stringify(user));
 
-    setInterval(() => {
-      navigate("/landing");
-    }, 2000);
+    const localData = JSON.parse(localStorage.getItem("userBody"));
+
+    setCurrentUser(localData);
+
+    if(localData) {
+      setTimeout(() => {
+        navigate("/landing");
+      }, 2000);
+    }
   }
   return (
     <styled.Form onSubmit={handleSubmit(onSubmit)}>

@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const navigate = useNavigate();
-  const { userBody } = useStorage();
+  const { currentUser } = useStorage();
 
   const {
     register,
@@ -24,13 +24,13 @@ const Login = () => {
       password: data.password,
     };
 
-    checkAuth(user, userBody);
+    checkAuth(user, currentUser);
   }
 
   const checkAuth = (user, userBody) => {
     if(user.email == userBody.email && user.password == userBody.password){
       console.log("success");
-      setInterval(() => {
+      setTimeout(() => {
         navigate("/");
       }, 1000)
     } else {
