@@ -8,13 +8,12 @@ import Landing from './pages/Landing';
 import Registration from './pages/Registration';
 import { UserContext } from './Utilities/Context/UserContext';
 
-
 function App() {
-  const [ currentUser, setCurrentUser ] = useState(null);
+  const [currentUser, setCurrentUser] = useState(null);
   console.log(currentUser);
   return (
     <div>
-      <UserContext.Provider value={{currentUser, setCurrentUser}}>
+      <UserContext.Provider value={{ currentUser, setCurrentUser }}>
         <Routes>
           <Route path="" element={<Layout />}>
             <Route index element={<Home />} />

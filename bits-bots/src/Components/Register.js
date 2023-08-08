@@ -9,7 +9,7 @@ import { UserContext } from '../Utilities/Context/UserContext.js';
 const Register = () => {
   const navigate = useNavigate();
   const { currentUser, setCurrentUser } = useContext(UserContext);
-  
+
   const {
     register,
     handleSubmit,
@@ -26,13 +26,13 @@ const Register = () => {
 
     localStorage.setItem('userBody', JSON.stringify(user));
 
-    const localData = JSON.parse(localStorage.getItem("userBody"));
+    const localData = JSON.parse(localStorage.getItem('userBody'));
 
     setCurrentUser(localData);
 
-    if(currentUser) {
+    if (currentUser) {
       setTimeout(() => {
-        navigate("/landing");
+        navigate('/landing');
       }, 2000);
     }
   }

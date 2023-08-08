@@ -28,16 +28,16 @@ const Login = () => {
   }
 
   const checkAuth = (user, userBody) => {
-    if(user.email === userBody.email && user.password === userBody.password){
-      console.log("success");
+    if (user.email === userBody.email && user.password === userBody.password) {
+      console.log('success');
       setTimeout(() => {
-        navigate("/");
-      }, 1000)
+        navigate('/');
+      }, 1000);
     } else {
       return false;
     }
-  }
-  
+  };
+
   return (
     <styled.Form onSubmit={handleSubmit(onSubmit)}>
       <styled.Input
