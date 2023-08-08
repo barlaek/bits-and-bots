@@ -14,7 +14,7 @@ export const Input = styled.input`
 export const LoginBtn = styled.input`
   padding: 5px 20px;
   background-color: #01f9c6;
-  color: #fff;
+  color: #121212;
   border: none;
   border-radius: 3px;
   cursor: pointer;
