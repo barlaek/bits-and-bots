@@ -27,8 +27,9 @@ const Login = () => {
     console.log(userBody);
 
     if (user.email === userBody.email && user.password === userBody.password) {
-      console.log('Success');
-      navigate("/");
+      setInterval(() => {
+        navigate("/");
+      }, 1000)
     } else {
       console.log('who is you?');
     }
