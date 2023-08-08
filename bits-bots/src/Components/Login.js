@@ -34,9 +34,9 @@ const Login = () => {
       //   navigate("/")
       // }, [navigate])
       // console.log("is this ok?")
-      setInterval(() => {
-        navigate("/");
-      }, 1000);
+      // setInterval(() => {
+      //   navigate("/");
+      // }, 1000);
     } else {
       console.log('who is you?');
     }
