@@ -18,3 +18,13 @@ export const Login = styled.button`
   cursor: pointer;
   font-weight: bold;
 `;
+
+export const Logout = styled.button`
+  border: none;
+  background-color: #01f9c6;
+  color: #121212;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+`;

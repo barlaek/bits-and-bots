@@ -12,10 +12,14 @@ const ProfileSelect = () => {
     landing('/landing');
   };
 
+  const logOut = () => {
+    localStorage.clear();
+  };
+
   return (
     <styled.Container>
       {userBody ? (
-        <Logout />
+        <styled.Logout onClick={logOut}>Logout</styled.Logout>
       ) : (
         <styled.Login onClick={handleClick}>Login</styled.Login>
       )}
