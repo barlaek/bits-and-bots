@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import * as styled from './ProfileSelect.styles.js';
 import { useNavigate } from 'react-router-dom';
 import Logout from './Logout.js';
 
 const ProfileSelect = () => {
+  const [ user, setUser ] = useState(false);
   const landing = useNavigate();
 
   const handleClick = () => {
@@ -11,15 +12,19 @@ const ProfileSelect = () => {
   };
 
   const checkAuth = () => {
-    if(!localStorage) {
-      console.log(localStorage);
+    if(localStorage.length === 0) {
+      setUser(false);
+    } else {
+      setUser(true);
     }
   }
 
+  console.log(user);
+
+
   return (
-    <styled.Container>
-      <styled.Login onClick={handleClick}>Login</styled.Login>
-      <Logout />
+    <styled.Container onChange={checkAuth}>
+      {user ? <styled.Login onClick={handleClick}>Login</styled.Login> : <Logout />}
     </styled.Container>
   );
 };
