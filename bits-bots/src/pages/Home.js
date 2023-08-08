@@ -44,7 +44,7 @@ function Home() {
     setFilterText(filterValue);
   }
 
-  console.log(localStorage)
+  console.log(localStorage.length)
 
   return (
     <styled.Container>

@@ -12,10 +12,8 @@ const ProfileSelect = () => {
   };
 
   const checkAuth = () => {
-    if(localStorage.length === 0) {
-      setUser(false);
-    } else {
-      setUser(true);
+    if(!localStorage.length === 0) {
+      setUser(!user);
     }
   }
 
@@ -24,7 +22,7 @@ const ProfileSelect = () => {
 
   return (
     <styled.Container onChange={checkAuth}>
-      {user ? <styled.Login onClick={handleClick}>Login</styled.Login> : <Logout />}
+      {!user ? <Logout /> : <styled.Login onClick={handleClick}>Login</styled.Login>}
     </styled.Container>
   );
 };
