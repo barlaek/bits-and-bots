@@ -15,47 +15,18 @@ const ProfileSelect = () => {
     landing('/landing');
   };
 
-  // if(userBody) {
-  //   	setLoggedIn(!loggedIn);
-  // }
+  function onChange() {
+    checkAuth(userBody);
+  }
 
-  // console.log(loggedIn);
-
-  // const isLoggedin = setCurrentUser(userBody);
-  // let button;
-
-  // if(isLoggedin) {
-  //   button = <Logout />
-  // } else {
-  //   button = <styled.Login onClick={handleClick}>Login</styled.Login>
-  // }
-
-
-  // const checkAuth = () => {
-  //   if(!currentUser) {
-  //     return <styled.Login>Login</styled.Login>
-  //   } else {
-
-  //   }
-  // }
-
-  // if(!currentUser) {
-  //   return <styled.Login onClick={handleClick}>Login</styled.Login>
-  // } else {
-  //   return <Logout />
-  // }
-  // const checkAuth = () => {
-  //   if(currentUser === null) {
-  //     if(!userBody) {
-  //       return <styled.Login>Login</styled.Login>
-  //     }
-  //   }
-  //   return <Logout />
-  // }
-
+  const checkAuth = (userBody) => {
+    if(userBody) {
+      setLoggedIn(!loggedIn)
+    }
+  }
 
   return (
-    <styled.Container>
+    <styled.Container key={onChange}>
       {/* {user ? <Logout /> : <styled.Login onClick={handleClick}>Login</styled.Login>} */}
       {/* {!user ? (
         <styled.Login onClick={handleClick}>Login</styled.Login>
@@ -63,6 +34,7 @@ const ProfileSelect = () => {
         <Logout />
       )} */}
       {/* {!currentUser ? <styled.Login onClick={handleClick}>Login</styled.Login> : <Logout />} */}
+      {!loggedIn ? <Logout /> : <styled.Login onClick={handleClick}>Login</styled.Login>}
     </styled.Container>
   );
 };
