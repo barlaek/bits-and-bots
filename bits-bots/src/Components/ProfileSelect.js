@@ -10,6 +10,12 @@ const ProfileSelect = () => {
     landing('/landing');
   };
 
+  const checkAuth = () => {
+    if(!localStorage) {
+      console.log(localStorage);
+    }
+  }
+
   return (
     <styled.Container>
       <styled.Login onClick={handleClick}>Login</styled.Login>
