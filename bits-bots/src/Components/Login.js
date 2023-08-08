@@ -24,14 +24,19 @@ const Login = () => {
       password: data.password,
     };
 
-    if (user.email === userBody.email && user.password === userBody.password) {
+    console.log(user, userBody);
+
+    if (user === userBody) {
       // setInterval(() => {
       //   window.location.reload();
       // }, 1000)
       // useEffect(() => {
       //   navigate("/")
       // }, [navigate])
-      console.log("is this ok?")
+      // console.log("is this ok?")
+      setInterval(() => {
+        navigate("/");
+      }, 1000);
     } else {
       console.log('who is you?');
     }
