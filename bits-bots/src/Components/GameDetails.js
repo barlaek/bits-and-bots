@@ -6,9 +6,10 @@ function GameDetails(props) {
   console.log(details.description);
 
   return (
-    <div>
+    <styled.Container>
+      <styled.Details>Game details</styled.Details>
       <styled.P>{details.description}</styled.P>
-    </div>
+    </styled.Container>
   );
 }
 
