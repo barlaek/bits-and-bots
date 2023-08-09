@@ -12,4 +12,6 @@ export const Header = styled.h1`
   padding: 5px 0;
 `;
 
-export const Price = styled.h2``;
+export const Price = styled.h2`
+    color: #ff6b87;
+`;
