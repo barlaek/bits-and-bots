@@ -1,15 +1,11 @@
-import React from "react";
-import { useCartState } from "../Utilities/Context/CartContext";
-import * as styled from "./Cart.styles.js";
+import React from 'react';
+import { useCartState } from '../Utilities/Context/CartContext';
+import * as styled from './Cart.styles.js';
 
 function Cart() {
-    const state = useCartState();
-    
-    return (
-        <styled.Container>
+  const state = useCartState();
 
-        </styled.Container>
-    )
+  return <styled.Container></styled.Container>;
 }
 
 export default Cart;
