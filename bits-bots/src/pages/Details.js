@@ -24,7 +24,7 @@ function Details() {
     <div>
       <Return />
       <DetailsGallery data={data} />
-      <AddToCart data={data}/>
+      <AddToCart data={data} />
       <GameDetails data={data} />
     </div>
   );

@@ -3,7 +3,6 @@ import * as styled from './GameDetails.styles.js';
 
 function GameDetails(props) {
   const details = props.data;
-  console.log(details.description);
 
   return (
     <styled.Container>
