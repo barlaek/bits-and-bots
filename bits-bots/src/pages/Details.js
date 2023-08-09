@@ -4,6 +4,8 @@ import { useApi } from '../Utilities/Hooks/useApi';
 import { productUrl } from '../Utilities/Constants/endpoints';
 import GameDetails from '../Components/GameDetails';
 import Loading from '../Components/Loading';
+import Return from '../Components/Return';
+import AddToCart from '../Components/AddToCart';
 
 function Details() {
   let { id } = useParams();
@@ -19,6 +21,8 @@ function Details() {
 
   return (
     <div>
+      <Return />
+      <AddToCart data={data}/>
       <GameDetails data={data} />
     </div>
   );
