@@ -21,7 +21,7 @@ export const Login = styled.button`
 
 export const Logout = styled.button`
   border: none;
-  background-color: #01f9c6;
+  background-color: #f1b7ff;
   color: #121212;
   padding: 5px 10px;
   border-radius: 3px;
