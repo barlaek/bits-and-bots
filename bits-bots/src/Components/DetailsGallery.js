@@ -5,26 +5,14 @@ import * as styled from "./DetailsGallery.styles.js";
 
 const DetailsGallery = (children) => {
     const [imageIndex, setImageIndex] = useState(0);
-    const data = children.data.images;
-    let images = data.map((image) => {
-        if(children == null) {
+    const data = children.data;
+    let images = data.images.map((image) => {
+        if(!image) {
             return;
         } else {
             return <styled.Image src={image.src} alt={image.alt} />
         }
     })
-
-    // let images = data.map((image) => {
-    //     return <styled.Image src={image.src} alt={image.alt}/>
-    // })
-    
-    // if(!data) {
-    //     return null;
-    // } else {
-    //     return data.map(image => <styled.Image src={image.src} alt={image.alt}/>)
-    // }
-
-
 
     const next = () => {
         setImageIndex((state) => (state += 1));
@@ -41,9 +29,7 @@ const DetailsGallery = (children) => {
       };
     return (
         <styled.Container>
-            {/* {data[imageIndex].map(image => <styled.Image src={image.src} alt={image.alt}/>)} */}
-            {/* {images[imageIndex]} */}
-
+            {images[imageIndex]}
             <styled.NavButton right onClick={next}>
                 <img src={chevronRight} alt="right arrow" />
             </styled.NavButton>
