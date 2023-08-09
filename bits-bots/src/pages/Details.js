@@ -23,8 +23,7 @@ function Details() {
   return (
     <div>
       <Return />
-      {data ? <DetailsGallery data={data} /> : null
-      }
+      <DetailsGallery data={data} />
       <AddToCart data={data}/>
       <GameDetails data={data} />
     </div>
