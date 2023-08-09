@@ -1,40 +1,33 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import chevronRight from '../images/chevron_right.svg';
 import chevronLeft from '../images/chevron_left.svg';
 import * as styled from "./DetailsGallery.styles.js";
 
 const DetailsGallery = (children) => {
     const [imageIndex, setImageIndex] = useState(0);
-    const data = children.data;
+    const [array, setArray] = useState([]);
 
-    // const images = data.images.map((image) => {
-    //     return <styled.Image src={image.src} alt={image.alt} />
-    // })
-
-    // console.log(images);
-
-    const checkData = (data) => {
-        if(data) {
-            const images = data.images.map((image) => {
-                return <styled.Image src={image.src} alt={image.alt} />
-            })
-
-            return images;
+    useEffect(() => {
+        async function checkData() {
+            try {
+                const data = children.data;
+                console.log(data);
+                const images = data.images
+                setArray(images)
+            } catch (error) {
+                console.log(error)
+            }
         }
-    }
+        checkData();
+    }, [children])
 
-    // if(!data) {
-    //     return null;
-    // } else {
-    //     setArray(data.images);
-    // }
-
-    // console.log(data);
-    // console.log(array);
+    const gallery = array.map((image) => {
+        return <styled.Image src={image.src} alt={image.alt}/>
+    })
 
     const next = () => {
         setImageIndex((state) => (state += 1));
-        if (imageIndex === data.length - 1) {
+        if (imageIndex === array.length - 1) {
           setImageIndex(0);
         }
       };
@@ -42,12 +35,12 @@ const DetailsGallery = (children) => {
       const previous = () => {
         setImageIndex((state) => (state -= 1));
         if (imageIndex === 0) {
-          setImageIndex(data.length - 1);
+          setImageIndex(array.length - 1);
         }
       };
     return (
         <styled.Container>
-            {/* {data ? images[imageIndex] : null } */}
+            {gallery[imageIndex]}
             <styled.NavButton right onClick={next}>
                 <img src={chevronRight} alt="right arrow" />
             </styled.NavButton>
