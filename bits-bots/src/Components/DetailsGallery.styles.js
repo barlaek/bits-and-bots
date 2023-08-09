@@ -27,7 +27,7 @@ export const NavButton = styled.button`
   cursor: pointer;
   padding: 0;
   position: absolute;
-  top: 220px;
+  top: 250px;
   border-radius: 50%;
   color: white;
   box-shadow:
