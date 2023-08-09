@@ -7,11 +7,21 @@ const DetailsGallery = (children) => {
     const [imageIndex, setImageIndex] = useState(0);
     const data = children.data;
 
-    const images = data.images.map((image) => {
-        return <styled.Image src={image.src} alt={image.alt} />
-    })
+    // const images = data.images.map((image) => {
+    //     return <styled.Image src={image.src} alt={image.alt} />
+    // })
 
-    console.log(images);
+    // console.log(images);
+
+    const checkData = (data) => {
+        if(data) {
+            const images = data.images.map((image) => {
+                return <styled.Image src={image.src} alt={image.alt} />
+            })
+
+            return images;
+        }
+    }
 
     // if(!data) {
     //     return null;
@@ -37,7 +47,7 @@ const DetailsGallery = (children) => {
       };
     return (
         <styled.Container>
-            {data ? images[imageIndex] : null }
+            {/* {data ? images[imageIndex] : null } */}
             <styled.NavButton right onClick={next}>
                 <img src={chevronRight} alt="right arrow" />
             </styled.NavButton>
