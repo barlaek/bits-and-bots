@@ -6,7 +6,6 @@ function AddToCart(props) {
     return (
         <styled.Container>
             <h1>{details.name}</h1>
-            <h3>${parseInt(`${details.prices.price}` / 100).toFixed(2)}</h3>
         </styled.Container>
     )
 }

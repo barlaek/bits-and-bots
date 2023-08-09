@@ -6,6 +6,7 @@ import GameDetails from '../Components/GameDetails';
 import Loading from '../Components/Loading';
 import Return from '../Components/Return';
 import AddToCart from '../Components/AddToCart';
+import DetailsGallery from '../Components/DetailsGallery';
 
 function Details() {
   let { id } = useParams();
@@ -22,6 +23,8 @@ function Details() {
   return (
     <div>
       <Return />
+      {data ? <DetailsGallery data={data} /> : null
+      }
       <AddToCart data={data}/>
       <GameDetails data={data} />
     </div>
