@@ -62,13 +62,14 @@ export const reducer = (state, action) => {
       }
 
       let removeCart = { ...action.payload };
-
+      console.log()
       if (localStorage.getItem('cart') == null) {
         localStorage.setItem('cart', '[]');
       }
 
       let storedCart = JSON.parse(localStorage.getItem('cart'));
-      storedCart.push(removeCart);
+      console.log(storedCart)
+      storedCart.splice(removeCart, 1);
       localStorage.setItem('cart', JSON.stringify(storedCart));
 
       newTotal = cart.reduce((currentTotal, product) => {
