@@ -60,14 +60,14 @@ export const reducer = (state, action) => {
           ];
         }
       }
-      
-      console.log()
+
+      console.log();
       if (localStorage.getItem('cart') == null) {
         localStorage.setItem('cart', '[]');
       }
 
       let storedCart = JSON.parse(localStorage.getItem('cart'));
-      console.log(storedCart)
+      console.log(storedCart);
       // storedCart.splice(removeCart, 1);
       // storedCart = [...storedCart.splice(removeCart, 1)]
       storedCart = [
