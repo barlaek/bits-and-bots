@@ -62,6 +62,7 @@ export const reducer = (state, action) => {
       }
 
       let removeCart = { ...action.payload };
+      
       console.log()
       if (localStorage.getItem('cart') == null) {
         localStorage.setItem('cart', '[]');
@@ -69,7 +70,12 @@ export const reducer = (state, action) => {
 
       let storedCart = JSON.parse(localStorage.getItem('cart'));
       console.log(storedCart)
-      storedCart.splice(removeCart, 1);
+      // storedCart.splice(removeCart, 1);
+      // storedCart = [...storedCart.splice(removeCart, 1)]
+      storedCart = [
+        ...storedCart.slice(0, productIndex),
+        ...storedCart.slice(productIndex + 1),
+      ];
       localStorage.setItem('cart', JSON.stringify(storedCart));
 
       newTotal = cart.reduce((currentTotal, product) => {
