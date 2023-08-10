@@ -35,7 +35,7 @@ function AddToCart(props) {
       <styled.BtnCont>
         <styled.AddToCart
           onClick={() =>
-            dispatch.dispatch({ type: 'addProduct', payload: props })
+            dispatch.dispatch({ type: 'addProduct', payload: props.data })
           }
         >
           Add to cart

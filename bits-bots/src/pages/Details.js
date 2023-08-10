@@ -21,7 +21,7 @@ function Details() {
   }
 
   return (
-    <div>
+    <div key={data.id}>
       <Return />
       <DetailsGallery data={data} />
       <AddToCart data={data} />

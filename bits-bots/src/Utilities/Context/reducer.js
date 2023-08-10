@@ -22,7 +22,7 @@ export const reducer = (state, action) => {
       }
 
       newTotal = cart.reduce((currentTotal, product) => {
-        currentTotal += product.discountedPrice * product.quantity;
+        currentTotal += product.prices * product.quantity;
         return currentTotal;
       }, 0);
       return { ...state, cart: cart, total: newTotal };
