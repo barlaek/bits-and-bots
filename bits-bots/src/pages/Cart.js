@@ -17,9 +17,13 @@ function Cart() {
     getCart();
   }, [])
 
+  const cartItems = cart.map((item) => {
+    console.log(item)
+  })
+
   return (
     <styled.Container>
-      <CartList key={cart} />
+      <CartList cartItems={cartItems} />
     </styled.Container>
   )
 }
