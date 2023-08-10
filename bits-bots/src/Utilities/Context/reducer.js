@@ -60,6 +60,17 @@ export const reducer = (state, action) => {
           ];
         }
       }
+
+      let removeCart = { ...action.payload };
+
+      if (localStorage.getItem('cart') == null) {
+        localStorage.setItem('cart', '[]');
+      }
+
+      let storedCart = JSON.parse(localStorage.getItem('cart'));
+      storedCart.push(removeCart);
+      localStorage.setItem('cart', JSON.stringify(storedCart));
+
       newTotal = cart.reduce((currentTotal, product) => {
         currentTotal += product.discountedPrice * product.quantity;
         return currentTotal;

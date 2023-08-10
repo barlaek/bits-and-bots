@@ -1,7 +1,9 @@
 import React from 'react';
 import * as styled from './CartList.styles';
+import { useCartState } from '../Utilities/Context/CartContext';
 
 function CartList(props) {
+    const dispatch = useCartState();
   let item;
 
   if (props) {
@@ -18,7 +20,7 @@ function CartList(props) {
               <option value="4">Qty 4</option>
               <option value="5">Qty 5</option>
             </styled.Select>
-            <styled.Remove>Remove item</styled.Remove>
+            <styled.Remove onClick={() => dispatch.dispatch({ type: "removeProduct", payload: props.cartItems})}>Remove item</styled.Remove>
           </styled.Data>
         </styled.Box>
       );
