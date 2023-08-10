@@ -18,11 +18,11 @@ function Cart() {
   // }, [])
   let cartItems;
 
-  if(localStorage.getItem("cart")) {
-    const localCart = JSON.parse(localStorage.getItem("cart"))
+  if (localStorage.getItem('cart')) {
+    const localCart = JSON.parse(localStorage.getItem('cart'));
     cartItems = localCart.map((items) => {
       return items;
-    })
+    });
   } else {
     return null;
   }
@@ -39,7 +39,7 @@ function Cart() {
     <styled.Container>
       <CartList cartItems={cartItems} />
     </styled.Container>
-  )
+  );
 }
 
 export default Cart;
