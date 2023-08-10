@@ -1,11 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    // width: 350px;
-    // background-color: #383838;
-    // margin: auto;
-    // border-radius: 5px;
-    // color: white;
+    height: 100vh;
 `;
 
 export const Box = styled.div`
@@ -38,4 +34,23 @@ export const Data = styled.div`
 
 export const Header = styled.h3`
 
+`;
+
+export const Select = styled.select`
+  width: 200px;
+  color: white;
+  background-color: #383838;
+  padding: 5px 0;
+  margin-top: 5px;
+  border-radius: 3px;
+  cursor: pointer;
+`;
+
+export const Remove = styled.button`
+    background-color: #383838;
+    color: white;
+    border: none;
+    text-decoration: underline;
+    cursor: pointer;
+    margin: 15px;
 `;
