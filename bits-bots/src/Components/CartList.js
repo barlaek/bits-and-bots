@@ -6,7 +6,7 @@ function CartList(props) {
     //     return <p>{items.name}</p>
     // })
 
-    console.log(props.cartItems)
+    console.log(props)
 
     return (
         <div></div>
