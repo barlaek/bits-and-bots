@@ -60,8 +60,6 @@ export const reducer = (state, action) => {
           ];
         }
       }
-
-      let removeCart = { ...action.payload };
       
       console.log()
       if (localStorage.getItem('cart') == null) {
