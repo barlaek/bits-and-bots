@@ -27,13 +27,6 @@ function CartList(props) {
     return null;
   }
 
-  console.log(item);
-  // const content = props.cartItems.map((item) => {
-  //     return <p>{item.name}</p>
-  // })
-
-  // console.log(props)
-
   return <styled.Container key={item}>{item}</styled.Container>;
 }
 

@@ -35,7 +35,7 @@ export const Data = styled.div`
 export const Header = styled.h3``;
 
 export const Select = styled.select`
-  width: 200px;
+  width: 195px;
   color: white;
   background-color: #383838;
   padding: 5px 0;
