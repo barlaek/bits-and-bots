@@ -11,6 +11,17 @@ export const reducer = (state, action) => {
       productIndex = cart.findIndex(
         (product) => product.id === action.payload.id,
       );
+
+      let localCart = {...action.payload}
+
+      if(localStorage.getItem("cart") == null) {
+        localStorage.setItem("cart" , "[]");
+      }
+
+      let oldCart = JSON.parse(localStorage.getItem("cart"));
+      oldCart.push(localCart);
+      localStorage.setItem("cart", JSON.stringify(oldCart));
+
       if (productIndex === -1) {
         cart.push({ ...action.payload, quantity: 1 });
       } else {
