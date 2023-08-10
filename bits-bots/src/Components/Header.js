@@ -6,6 +6,7 @@ import * as styles from './Header.styles.js';
 import { useNavigate } from 'react-router-dom';
 import Profile from './Profile';
 import ProfileSelect from './ProfileSelect';
+import NavCart from './NavCart';
 
 function Header() {
   const home = useNavigate();
@@ -25,7 +26,7 @@ function Header() {
             </Profile>
           </styles.Li>
           <styles.Li>
-            <img src={cartIcon} alt="cart" />
+            <NavCart label={<img src={cartIcon} alt="cart" />} />
           </styles.Li>
         </styles.Ul>
       </styles.Header>
