@@ -1,7 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import * as styled from "./OrderSummary.styles.js";
 
 const OrderSummary = (props) => {
+    const navigate = useNavigate();
     let prodPrice;
 
     if(props) {
@@ -12,6 +14,7 @@ const OrderSummary = (props) => {
     console.log(prodPrice)
     let sum = prodPrice.reduce((total, value) => total = total + parseInt(value), 0)
     console.log(sum.toFixed(2))
+
     return (
         <styled.Container>
             <styled.Summary>
@@ -23,6 +26,9 @@ const OrderSummary = (props) => {
             <styled.TotalBox>
                 <styled.Total>Total: ${!sum ? 0.00 : sum.toFixed(2)}</styled.Total>
             </styled.TotalBox>
+            <styled.CheckoutBox>
+                {!sum ? null : <styled.CheckoutBtn onClick={() => navigate("/checkout")}>Checkout</styled.CheckoutBtn>}
+            </styled.CheckoutBox>
         </styled.Container>
     )
 }

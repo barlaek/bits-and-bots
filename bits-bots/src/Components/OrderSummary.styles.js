@@ -31,3 +31,16 @@ export const TotalBox = styled.div`
 export const Total = styled.h3`
 
 `;
+
+export const CheckoutBox = styled.div`
+    margin: 0 auto 15px;
+`;
+
+export const CheckoutBtn = styled.button`
+    background-color: #01F9C6;
+    color: #121212;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 120px;
+`;

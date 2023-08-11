@@ -9,6 +9,7 @@ import Registration from './pages/Registration';
 import { UserContext } from './Utilities/Context/UserContext';
 import CartContext from './Utilities/Context/CartContext';
 import Cart from './pages/Cart';
+import Checkout from './pages/Checkout';
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -24,6 +25,7 @@ function App() {
               <Route path="/landing" element={<Landing />} />
               <Route path="/registration" element={<Registration />} />
               <Route path="/cart" element={<Cart />} />
+              <Route path='/checkout' element={<Checkout />} />
             </Route>
           </Routes>
         </CartContext>
