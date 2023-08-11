@@ -3,6 +3,9 @@ import Login from '../Components/Login.js';
 import Tab from '../Components/Tab.js';
 import * as styled from './Landing.styles.js';
 
+/**
+ * @returns login page component
+ */
 const Landing = () => {
   return (
     <styled.Background>

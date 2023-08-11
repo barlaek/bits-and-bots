@@ -3,6 +3,10 @@ import * as styled from './Registration.styles.js';
 import Register from '../Components/Register.js';
 import Tab from '../Components/Tab.js';
 
+/**
+ *
+ * @returns registration page component
+ */
 const Registration = () => {
   return (
     <styled.Background>

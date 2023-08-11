@@ -4,6 +4,10 @@ import Header from '../Components/Header';
 import Footer from '../Components/Footer';
 import * as styles from './Layout.styles.js';
 
+/**
+ *
+ * @returns an outlet for the router dom
+ */
 function Layout() {
   return (
     <styles.Container>

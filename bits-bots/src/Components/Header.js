@@ -8,22 +8,21 @@ import Profile from './Profile';
 import ProfileSelect from './ProfileSelect';
 import NavCart from './NavCart';
 
+/**
+ * Header component that
+ * @returns a functional header that can traverse the application
+ */
 function Header() {
+  /**
+   * Initializes the navigation hook
+   */
   const home = useNavigate();
+  /**
+   * Button click function that navigates to /home
+   */
   const handleClick = () => {
     home('/home');
   };
-
-  // let checkCart;
-
-  // if (localStorage.getItem('cart')) {
-  //   const localCart = JSON.parse(localStorage.getItem('cart'));
-  //   checkCart = localCart.map((items) => {
-  //     return items;
-  //   });
-  // }
-
-  // console.log(checkCart)
 
   return (
     <styles.Container>
@@ -39,7 +38,6 @@ function Header() {
           </styles.Li>
           <styles.Li>
             <NavCart label={<img src={cartIcon} alt="cart" />} />
-            {/* {!checkCart ? null : <styles.Notification><styles.Number>{checkCart.length}</styles.Number></styles.Notification>} */}
           </styles.Li>
         </styles.Ul>
       </styles.Header>

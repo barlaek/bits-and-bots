@@ -1,5 +1,8 @@
 import * as yup from 'yup';
 
+/**
+ * Registration and login schema object
+ */
 export const schema = yup
   .object({
     email: yup.string().required('Please enter a valid email address'),
@@ -7,6 +10,9 @@ export const schema = yup
   })
   .required();
 
+/**
+ * Checkout schema object
+ */
 export const checkoutSchema = yup
   .object({
     name: yup.string().min(3).required('Please enter your name'),

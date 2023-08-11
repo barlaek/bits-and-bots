@@ -1,6 +1,11 @@
 import React from 'react';
 import * as styled from './GameDetails.styles.js';
 
+/**
+ * Takes an
+ * @param {object} props and
+ * @returns a text component
+ */
 function GameDetails(props) {
   const details = props.data;
 

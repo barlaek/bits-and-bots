@@ -1,6 +1,11 @@
 import React from 'react';
 import * as styled from './CartMessage.styles.js';
 
+/**
+ * Checks for an
+ * @param {array} props from localStorage
+ * @returns a message if empty, else only title
+ */
 const CartMessage = (props) => {
   let message = props.cartItems;
 

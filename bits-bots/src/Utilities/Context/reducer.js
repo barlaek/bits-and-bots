@@ -1,5 +1,11 @@
 export const initialState = { cart: [], total: 0 };
 
+/**
+ * Reducer function
+ * @param {cartContext} state
+ * @param {dispatch} action
+ * @returns a dispatch function updates the cartContext
+ */
 export const reducer = (state, action) => {
   let productIndex;
   let newTotal;

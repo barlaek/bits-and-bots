@@ -2,21 +2,37 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import * as styled from './OrderSummary.styles.js';
 
+/**
+ * Summarizes an
+ * @param {array} props of cart items
+ * @returns a sum total
+ */
 const OrderSummary = (props) => {
+  /**
+   * Initializes navigation
+   */
   const navigate = useNavigate();
+  /**
+   * Initializes the price variable
+   */
   let prodPrice;
 
+  /**
+   * Checks the array and returns a string value with 2 decimals and sets them to price variable
+   */
   if (props) {
     prodPrice = props.cartItems.map((prop) => {
       return parseInt(`${prop.prices.price}` / 100).toFixed(2);
     });
   }
-  console.log(prodPrice);
+
+  /**
+   * Calculates the sum total of the array
+   */
   let sum = prodPrice.reduce(
     (total, value) => (total = total + parseInt(value)),
     0,
   );
-  console.log(sum.toFixed(2));
 
   return (
     <styled.Container>

@@ -5,9 +5,18 @@ import OrderSummary from '../Components/OrderSummary';
 import Return from '../Components/Return';
 import * as styled from './Cart.styles.js';
 
+/**
+ * Cart page component
+ * @returns the cart page
+ */
 function Cart() {
+  /**
+   * Initializes the cart array
+   */
   let cartItems;
-
+  /**
+   * Checks the local storage for the cart array and returns an array
+   */
   if (localStorage.getItem('cart')) {
     const localCart = JSON.parse(localStorage.getItem('cart'));
     cartItems = localCart.map((items) => {

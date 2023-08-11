@@ -6,10 +6,22 @@ import { schema } from '../Utilities/Constants/schema.js';
 import useStorage from '../Utilities/Hooks/useStorage.js';
 import { useNavigate } from 'react-router-dom';
 
+/**
+ * @returns a login form
+ */
 const Login = () => {
+  /**
+   * Initializes navigation hook
+   */
   const navigate = useNavigate();
+  /**
+   * localStorage hook that fetches a user
+   */
   const { userBody } = useStorage();
 
+  /**
+   * Form validation with yup schema object
+   */
   const {
     register,
     handleSubmit,
@@ -18,6 +30,10 @@ const Login = () => {
     resolver: yupResolver(schema),
   });
 
+  /**
+   * Submission function that takes
+   * @param {input} data
+   */
   function onSubmit(data) {
     const user = {
       email: data.email,
@@ -27,9 +43,14 @@ const Login = () => {
     checkAuth(user, userBody);
   }
 
+  /**
+   * Validation function
+   * @param {input} user
+   * @param {localStorage} userBody
+   * @returns a valid user and navigates to /home
+   */
   const checkAuth = (user, userBody) => {
     if (user.email === userBody.email && user.password === userBody.password) {
-      console.log('success');
       setTimeout(() => {
         navigate('/home');
       }, 1000);

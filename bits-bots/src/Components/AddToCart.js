@@ -2,12 +2,27 @@ import React, { useEffect, useState } from 'react';
 import * as styled from './AddToCart.styles.js';
 import { useCartState } from '../Utilities/Context/CartContext.js';
 
+/**
+ * Returns an add to cart component on the Details page
+ */
 function AddToCart(props) {
+  /**
+   * Fetches the cart context
+   */
   const dispatch = useCartState();
-  console.log(dispatch);
+  /**
+   * Returns the name of the game
+   */
   const [name, setName] = useState('');
+
+  /**
+   * Returns the price of the game
+   */
   const [prices, setPrice] = useState('');
 
+  /**
+   * Asynchronously fetches the data to prevent application crash
+   */
   useEffect(() => {
     async function checkPrice() {
       try {
@@ -23,6 +38,9 @@ function AddToCart(props) {
     checkPrice();
   }, [props]);
 
+  /**
+   * Converts the returned string to an integer and converts it back to string with decimal point
+   */
   const convertedPrice = parseInt(prices / 100).toFixed(2);
 
   return (

@@ -5,9 +5,19 @@ import * as styled from './CheckoutForm.styles.js';
 import { checkoutSchema } from '../Utilities/Constants/schema.js';
 import { useNavigate } from 'react-router-dom';
 
+/**
+ * Function that
+ * @returns a checkout form
+ */
 const CheckoutForm = () => {
+  /**
+   * Initializing the useNavigate hook
+   */
   const navigate = useNavigate();
 
+  /**
+   * Initializing the yup schema object, react hook form and the yup resolver
+   */
   const {
     register,
     handleSubmit,
@@ -16,6 +26,10 @@ const CheckoutForm = () => {
     resolver: yupResolver(checkoutSchema),
   });
 
+  /**
+   * Submission function that takes an
+   * @param {object} data and "validates it"
+   */
   function onSubmit(data) {
     const checkoutDetails = {
       name: data.name,
@@ -25,6 +39,11 @@ const CheckoutForm = () => {
     clear(checkoutDetails);
   }
 
+  /**
+   * "Validation function" that takes
+   * @param {input object} checkoutDetails
+   * and clears the cart object from localStorage, and redirects user back to /home
+   */
   const clear = (checkoutDetails) => {
     if (checkoutDetails) {
       localStorage.removeItem('cart');

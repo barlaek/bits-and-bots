@@ -1,12 +1,22 @@
 import React from 'react';
 import * as styled from './CartList.styles';
 import { useCartState } from '../Utilities/Context/CartContext';
-import CartMessage from './CartMessage';
 
+/**
+ *
+ * @param {array} props from localStorage
+ * @returns returns a list component of products in cart
+ */
 function CartList(props) {
+  /**
+   * Fetches the cart context for the removeProduct function
+   */
   const dispatch = useCartState();
   let item;
 
+  /**
+   * Checks for an array to prevent application crash
+   */
   if (props) {
     item = props.cartItems.map((prop) => {
       return (
