@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  height: 100vh;
 `;
 
 export const Box = styled.div`
@@ -32,16 +31,12 @@ export const Data = styled.div`
   height: 170px;
 `;
 
-export const Header = styled.h3``;
+export const Header = styled.h2`
+  font-size: 20px;
+`;
 
-export const Select = styled.select`
-  width: 195px;
-  color: white;
-  background-color: #383838;
-  padding: 5px 0;
-  margin-top: 5px;
-  border-radius: 3px;
-  cursor: pointer;
+export const Price = styled.h3`
+  color: #ff6b87;
 `;
 
 export const Remove = styled.button`
