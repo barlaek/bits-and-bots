@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import CartList from "../Components/CartList.js";
 import CheckoutForm from "../Components/CheckoutForm.js";
+import CheckoutSummary from "../Components/CheckoutSummary.js";
 import Return from '../Components/Return';
 import * as styled from "./Checkout.styles.js";
 
@@ -29,6 +30,7 @@ const Checkout = () => {
                 <styled.CartInfo onClick={toggle}>Cart: ({cartItems.length} items)</styled.CartInfo>
                 {open && <CartList cartItems={cartItems}/>}
             </styled.CartContainer>
+            <CheckoutSummary cartItems={cartItems}/>
             <styled.FormContainer>
                 <styled.Details>Checkout details</styled.Details>
                 <CheckoutForm />
