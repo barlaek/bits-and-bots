@@ -42,3 +42,14 @@ export const Li = styled.li`
   margin: 0 5px;
   cursor: pointer;
 `;
+
+export const Notification = styled.div`
+  backgorund-color: #01f9c6;
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+`;
+
+export const Number = styled.p`
+  color: #121212;
+`;
