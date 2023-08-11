@@ -7,6 +7,7 @@ import * as styled from './Home.styles.js';
 import Filter from '../Components/Filter';
 import FilterSelect from '../Components/FilterSelect';
 import Slider from '../Components/Slider';
+import Error from '../Components/Error';
 
 function Home() {
   const { data, loading, error } = useApi(`${productUrl}`);
@@ -33,7 +34,7 @@ function Home() {
   }
 
   if (error) {
-    return <div>Error</div>;
+    return <Error key={error} />;
   }
 
   function onFiltervalueSelected(filterValue) {
