@@ -7,6 +7,7 @@ import Loading from '../Components/Loading';
 import Return from '../Components/Return';
 import AddToCart from '../Components/AddToCart';
 import DetailsGallery from '../Components/DetailsGallery';
+import * as styled from "./Details.styles.js";
 
 function Details() {
   let { id } = useParams();
@@ -24,8 +25,10 @@ function Details() {
     <div key={data.id}>
       <Return />
       <DetailsGallery data={data} />
-      <AddToCart data={data} />
-      <GameDetails data={data} />
+      <styled.Wrapper>
+        <AddToCart data={data} />
+        <GameDetails data={data} />
+      </styled.Wrapper>
     </div>
   );
 }

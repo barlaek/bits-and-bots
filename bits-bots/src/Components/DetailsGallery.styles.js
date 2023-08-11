@@ -9,6 +9,9 @@ export const Container = styled.div`
     display: flex;
     margin: 10px auto 0 auto;
     overflow: hidden;
+    @media (min-width: 720px) {
+      min-width: 720px;
+    }
 `;
 
 export const Image = styled.img`
@@ -16,6 +19,10 @@ export const Image = styled.img`
   height: 100%;
   transition: left 1s;
   border-radius: 5px;
+  @media (min-width: 720px) {
+    width: 720px;
+    height: 450px;
+  }
 `;
 
 export const NavButton = styled.button`
@@ -38,8 +45,25 @@ export const NavButton = styled.button`
     props.right === true
       ? css`
           right: 2%;
+          @media (min-width: 720px) {
+            right: 5%;
+          }
+          @media (min-width: 1100px) {
+            right: 25%;
+          }
         `
       : css`
           left: 2%;
+          @media (min-width: 720px) {
+            left: 5%;
+          }
+          @media (min-width: 1100px) {
+            left: 25%;
+          }
         `}
+
+        @media (min-width: 720px) {
+          top: 350px
+        }
+            
 `;
