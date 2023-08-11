@@ -18,8 +18,3 @@ export const P = styled.p`
   margin-left: 10px;
   margin-bottom: 20px;
 `;
-
-// export const Image = styled.img`
-//   width: 350px;
-//   height: 150px;
-// `;

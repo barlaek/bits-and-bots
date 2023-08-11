@@ -67,9 +67,6 @@ export const reducer = (state, action) => {
       }
 
       let storedCart = JSON.parse(localStorage.getItem('cart'));
-      console.log(storedCart);
-      // storedCart.splice(removeCart, 1);
-      // storedCart = [...storedCart.splice(removeCart, 1)]
       storedCart = [
         ...storedCart.slice(0, productIndex),
         ...storedCart.slice(productIndex + 1),

@@ -9,9 +9,7 @@ const CheckoutSummary = (props) => {
             return parseInt(`${prop.prices.price}` / 100).toFixed(2);
         })
     }
-    console.log(prodPrice)
     let sum = prodPrice.reduce((total, value) => total = total + parseInt(value), 0)
-    console.log(sum.toFixed(2))
 
     return (
         <styled.Container>

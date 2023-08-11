@@ -22,15 +22,11 @@ function Home() {
     }
   });
 
-  console.log(filteredProductList);
-
   const productOnSale = data.filter((product) => {
     if (product.on_sale === true) {
       return { product };
     }
   });
-
-  console.log(productOnSale);
 
   if (loading) {
     return <Loading key={loading} />;
@@ -43,8 +39,6 @@ function Home() {
   function onFiltervalueSelected(filterValue) {
     setFilterText(filterValue);
   }
-
-  console.log(localStorage.length);
 
   return (
     <styled.Container>

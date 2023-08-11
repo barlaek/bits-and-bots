@@ -22,7 +22,6 @@ const CheckoutForm = () => {
       address: data.address,
       creditCard: data.creditCard,
     };
-    console.log(checkoutDetails);
     clear(checkoutDetails);
   }
 
