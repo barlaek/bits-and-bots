@@ -40,6 +40,16 @@ export const Ul = styled.ul`
   list-style-type: none;
   margin-left: 38%;
   margin-top: 7%;
+  @media (min-width: 720px) {
+    margin-top: 4%;
+    margin-left: 60%
+
+  }
+
+  @media (min-width: 1100px) {
+    margin-top: 2.5%;
+    margin-left: 80%
+  }
 `;
 
 export const Li = styled.li`
@@ -48,13 +58,13 @@ export const Li = styled.li`
   cursor: pointer;
 `;
 
-export const Notification = styled.div`
-  backgorund-color: #01f9c6;
-  border-radius: 50%;
-  position: absolute;
-  top: 20px;
-`;
+// export const Notification = styled.div`
+//   backgorund-color: #01f9c6;
+//   border-radius: 50%;
+//   position: absolute;
+//   top: 20px;
+// `;
 
-export const Number = styled.p`
-  color: #121212;
-`;
+// export const Number = styled.p`
+//   color: #121212;
+// `;
