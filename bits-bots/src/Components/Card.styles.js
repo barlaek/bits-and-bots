@@ -1,5 +1,13 @@
 import styled from 'styled-components';
 
+export const Wrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(1fr, 350px);
+  @media (min-width: 720px) {
+    grid-template-columns: repeat(2fr, 350px)
+  }
+`;
+
 export const Card = styled.div`
   color: #ffffff;
   background-color: #383838;

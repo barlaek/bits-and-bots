@@ -17,7 +17,7 @@ function Card(props) {
       </styled.Card>
     );
   });
-  return <div>{content}</div>;
+  return <styled.Wrapper>{content}</styled.Wrapper>;
 }
 
 export default Card;
