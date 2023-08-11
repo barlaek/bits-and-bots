@@ -7,4 +7,8 @@ export const Return = styled.button`
   padding: 0;
   border: 0;
   background-color: #121212;
+  cursor: pointer;
+  @media (min-width: 1100px) {
+    margin-left: 22%;
+  }
 `;

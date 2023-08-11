@@ -1,6 +1,11 @@
 import React from 'react';
 import * as styled from './FilterSelect.styles.js';
 
+/**
+ * Filtration component that takes an
+ * @param {Array} props of games
+ * @returns a select menu
+ */
 const FilterSelect = (props) => {
   function onFilterValueChanged(event) {
     props.filterValueSelected(event.target.value);

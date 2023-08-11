@@ -6,12 +6,24 @@ import * as styles from './Header.styles.js';
 import { useNavigate } from 'react-router-dom';
 import Profile from './Profile';
 import ProfileSelect from './ProfileSelect';
+import NavCart from './NavCart';
 
+/**
+ * Header component that
+ * @returns a functional header that can traverse the application
+ */
 function Header() {
+  /**
+   * Initializes the navigation hook
+   */
   const home = useNavigate();
+  /**
+   * Button click function that navigates to /home
+   */
   const handleClick = () => {
-    home('/');
+    home('/home');
   };
+
   return (
     <styles.Container>
       <styles.Header>
@@ -25,7 +37,7 @@ function Header() {
             </Profile>
           </styles.Li>
           <styles.Li>
-            <img src={cartIcon} alt="cart" />
+            <NavCart label={<img src={cartIcon} alt="cart" />} />
           </styles.Li>
         </styles.Ul>
       </styles.Header>

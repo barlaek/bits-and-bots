@@ -1,5 +1,20 @@
 import styled from 'styled-components';
 
+export const Wrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  max-width: 720px;
+  margin: 0 auto;
+  @media (min-width: 720px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1100px) {
+    max-width: 1100px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+`;
+
 export const Card = styled.div`
   color: #ffffff;
   background-color: #383838;

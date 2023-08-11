@@ -12,8 +12,19 @@ export const Container = styled.div`
 export const Login = styled.button`
   border: none;
   background-color: #01f9c6;
-  color: white;
+  color: #121212;
   padding: 5px 10px;
-  border-radius: 5px;
+  border-radius: 3px;
   cursor: pointer;
+  font-weight: bold;
+`;
+
+export const Logout = styled.button`
+  border: none;
+  background-color: #f1b7ff;
+  color: #121212;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
 `;

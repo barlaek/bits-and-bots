@@ -1,20 +1,19 @@
 import React from 'react';
-import Return from './Return.js';
 import * as styled from './GameDetails.styles.js';
 
+/**
+ * Takes an
+ * @param {object} props and
+ * @returns a text component
+ */
 function GameDetails(props) {
   const details = props.data;
 
   return (
-    <div>
-      <Return />
-      <styled.Container>
-        <div>
-          <styled.Image src={details.images} alt="product image" />
-        </div>
-        <h2>{details.name}</h2>
-      </styled.Container>
-    </div>
+    <styled.Container>
+      <styled.Details>Game details</styled.Details>
+      <styled.P>{details.description}</styled.P>
+    </styled.Container>
   );
 }
 

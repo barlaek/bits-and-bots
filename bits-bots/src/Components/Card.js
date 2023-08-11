@@ -2,6 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import * as styled from './Card.styles.js';
 
+/**
+ * Returns a card component that takes
+ * @param {array} props of filtered products
+ * @returns card to be display at /home
+ */
+
 function Card(props) {
   const content = props.filteredProductList.map((prop) => {
     return (
@@ -17,7 +23,7 @@ function Card(props) {
       </styled.Card>
     );
   });
-  return <div>{content}</div>;
+  return <styled.Wrapper>{content}</styled.Wrapper>;
 }
 
 export default Card;
