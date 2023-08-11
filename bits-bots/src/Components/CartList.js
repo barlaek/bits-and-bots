@@ -1,6 +1,7 @@
 import React from 'react';
 import * as styled from './CartList.styles';
 import { useCartState } from '../Utilities/Context/CartContext';
+import CartMessage from './CartMessage';
 
 function CartList(props) {
   const dispatch = useCartState();
