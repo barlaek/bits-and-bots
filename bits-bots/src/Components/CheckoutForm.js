@@ -23,7 +23,8 @@ const CheckoutForm = () => {
       creditCard: data.creditCard,
     };
     console.log(checkoutDetails);
-
+    alert("Success!")
+    navigate("/");
     // checkAuth(user, userBody);
   }
 
@@ -48,7 +49,7 @@ const CheckoutForm = () => {
       <p>{errors.name?.message}</p>
       <styled.Input
         type="address"
-        placeholder="address"
+        placeholder="Address"
         {...register('address')}
       />
       <p>{errors.address?.message}</p>
@@ -58,7 +59,7 @@ const CheckoutForm = () => {
         {...register('creditCard')}
       />
       <p>{errors.creditCard?.message}</p>
-      <styled.Submit type="submit" value="Checkout" />
+      <styled.Submit type="submit" value="Place order" />
     </styled.Form>
   );
 };

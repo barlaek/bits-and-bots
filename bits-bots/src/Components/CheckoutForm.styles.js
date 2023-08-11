@@ -1,28 +1,25 @@
 import styled from "styled-components";
 
 export const Form = styled.form`
-    width: 350px;
-    background-color: #383838;
     margin: 15px auto;
-    color: white;
-    border-radius: 5px;
 `;
 
 export const Input = styled.input`
-    width: 230px;
+    width: 315px;
     height: 30px;
     border-radius: 5px;
     padding: 0 5px;
     background-color: #121212;
     color: white;
+    margin: 0 auto;
 `;
 
 export const Submit = styled.input`
-    padding: 5px 20px;
-    background-color: #01f9c6;
     color: #121212;
+    background-color: #01f9c6;
     border: none;
-    border-radius: 3px;
-    cursor: pointer;
+    border-radius: 5px;
+    padding: 10px 120px;
+    margin: 0 10px 20px 10px;
     font-weight: bold;
 `;

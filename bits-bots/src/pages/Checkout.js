@@ -19,7 +19,10 @@ const Checkout = () => {
             <styled.CartContainer>
                 <styled.CartInfo>Cart: ({cartItems.length} items)</styled.CartInfo>
             </styled.CartContainer>
-            <CheckoutForm />
+            <styled.FormContainer>
+                <styled.Details>Checkout details</styled.Details>
+                <CheckoutForm />
+            </styled.FormContainer>
         </styled.Container>
     )
 }
