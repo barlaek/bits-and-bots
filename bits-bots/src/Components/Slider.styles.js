@@ -9,13 +9,29 @@ export const Container = styled.div`
     display: flex;
     margin: 10px auto 0 auto;
     overflow: hidden;
+    @media (min-width: 720px) {
+      min-width: 720px;
+    }
+  
+    @media (min-width: 1100px) {
+      min-width: 1100px;
+    }
 `;
 
 export const Image = styled.img`
-  width: 100%;
+  width: 350px;
   height: 100%;
   transition: left 1s;
   border-radius: 5px;
+  @media (min-width: 720px) {
+    width: 720px;
+    height: 450px;
+  }
+
+  @media (min-width: 1100px) {
+    width: 1100px;
+    height: 600px;
+  }
 `;
 
 export const NavButton = styled.button`
@@ -34,6 +50,7 @@ export const NavButton = styled.button`
     0px 4px 60px 20px rgba(3, 3, 3, 0.9),
     inset 0 --3em 3em rgba(3, 3, 3, 0.5);
   transform: translate(0, -50%);
+
   ${(props) =>
     props.right === true
       ? css`
@@ -42,6 +59,14 @@ export const NavButton = styled.button`
       : css`
           left: 2%;
         `}
+
+  @media (min-width: 720px) {
+    top: 300px
+  }
+      
+  @media (min-width: 1100px) {
+    top: 400px;
+  }
 `;
 
 export const Title = styled.h1`
@@ -52,4 +77,13 @@ export const Title = styled.h1`
   background-color: #ff6b87;
   padding: 7px 20px;
   left: 2%;
+  @media (min-width: 720px) {
+    top: 450px;
+    left: 3%;
+  }
+
+  @media (min-width: 1100px) {
+    top: 550px;
+    left: 20%;
+  }
 `;
