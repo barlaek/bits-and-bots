@@ -23,21 +23,16 @@ const CheckoutForm = () => {
       creditCard: data.creditCard,
     };
     console.log(checkoutDetails);
-    alert("Success!")
-    navigate("/");
-    // checkAuth(user, userBody);
+    clear(checkoutDetails);
   }
 
-//   const checkAuth = (user, userBody) => {
-//     // if (user.email === userBody.email && user.password === userBody.password) {
-//     //   console.log('success');
-//     //   setTimeout(() => {
-//     //     navigate('/');
-//     //   }, 1000);
-//     // } else {
-//     //   return false;
-//     // }
-//   };
+  const clear = (checkoutDetails) => {
+    if(checkoutDetails) {
+        localStorage.removeItem("cart");
+        alert("Thank you for your order!");
+        navigate("/");
+    }
+  }
 
   return (
     <styled.Form onSubmit={handleSubmit(onSubmit)}>
