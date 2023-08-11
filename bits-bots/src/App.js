@@ -10,10 +10,11 @@ import { UserContext } from './Utilities/Context/UserContext';
 import CartContext from './Utilities/Context/CartContext';
 import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
+import NotFound from './Components/NotFound';
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
-  console.log(currentUser);
+
   return (
     <div>
       <UserContext.Provider value={{ currentUser, setCurrentUser }}>
@@ -26,6 +27,7 @@ function App() {
               <Route path="/registration" element={<Registration />} />
               <Route path="/cart" element={<Cart />} />
               <Route path="/checkout" element={<Checkout />} />
+              <Route path='*' element={<NotFound />} />
             </Route>
           </Routes>
         </CartContext>
