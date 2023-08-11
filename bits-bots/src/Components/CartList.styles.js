@@ -16,7 +16,7 @@ export const Box = styled.div`
   max-height: 150px;
   border: 1px solid #383838;
   border-radius: 5px;
-  margin: 15px auto;
+  margin: 0 auto;
 `;
 
 export const Image = styled.img`

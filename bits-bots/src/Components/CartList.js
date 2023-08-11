@@ -6,11 +6,6 @@ function CartList(props) {
   const dispatch = useCartState();
   let item;
 
-  //   const handleClick = () => {
-  //     dispatch.dispatch({ type: "removeProduct", payload: props.cartItems})
-  //     console.log(dispatch.dispatch)
-  //   }
-
   if (props) {
     item = props.cartItems.map((prop) => {
       return (
@@ -26,7 +21,6 @@ function CartList(props) {
             >
               Remove item
             </styled.Remove>
-            {/* <styled.Remove onClick={handleClick}>Remove item</styled.Remove> */}
           </styled.Data>
         </styled.Box>
       );

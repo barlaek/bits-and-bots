@@ -1,6 +1,7 @@
 import React from 'react';
 import CartList from '../Components/CartList';
 import OrderSummary from '../Components/OrderSummary';
+import Return from '../Components/Return';
 import * as styled from './Cart.styles.js';
 
 function Cart() {
@@ -17,6 +18,7 @@ function Cart() {
 
   return (
     <styled.Container>
+      <Return />
       <CartList cartItems={cartItems} />
       <OrderSummary cartItems={cartItems} />
     </styled.Container>
