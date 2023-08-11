@@ -10,6 +10,13 @@ export const Header = styled.header`
   margin: 0 auto;
   width: 350px;
   height: 75px;
+  @media (min-width: 720px) {
+    width: 700px;
+  }
+
+  @media (min-width: 1100px) {
+    width: 1100px;
+  }
 `;
 
 export const HomeBtn = styled.button`
@@ -29,8 +36,6 @@ export const LogoBtn = styled.img`
 `;
 
 export const Ul = styled.ul`
-  // display: flex;
-  // align-items: center;
   display: inline-block;
   list-style-type: none;
   margin-left: 38%;
