@@ -40,16 +40,16 @@ function Cart() {
     return null;
   }
 
-  let priceSum;
+  // let priceSum;
 
-  if (localStorage.getItem('cart')) {
-    const localCart = JSON.parse(localStorage.getItem('cart'));
-    priceSum = localCart.map((items) => {
-      return items;
-    });
-  } else {
-    return null;
-  }
+  // if (localStorage.getItem('cart')) {
+  //   const localCart = JSON.parse(localStorage.getItem('cart'));
+  //   priceSum = localCart.map((items) => {
+  //     return items;
+  //   });
+  // } else {
+  //   return null;
+  // }
 
   // const cartItems = cart.map((item) => {
   //   if(!item) {
@@ -62,7 +62,7 @@ function Cart() {
   return (
     <styled.Container>
       <CartList cartItems={cartItems} />
-      <OrderSummary priceSum={priceSum} />
+      <OrderSummary cartItems={cartItems} />
     </styled.Container>
   );
 }
