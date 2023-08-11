@@ -31,9 +31,11 @@ const Register = () => {
     setCurrentUser(localData);
 
     if (currentUser) {
-      setTimeout(() => {
-        navigate('/landing');
-      }, 2000);
+      // setTimeout(() => {
+      //   navigate('/landing');
+      // }, 2000);
+      alert("Thank you for registering with Bits & Bots")
+      navigate("/home");
     }
   }
   return (

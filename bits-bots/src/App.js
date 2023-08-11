@@ -20,9 +20,9 @@ function App() {
         <CartContext>
           <Routes>
             <Route path="" element={<Layout />}>
-              <Route index element={<Home />} />
+              <Route index element={<Landing />} />
               <Route path="/:id" element={<Details />} />
-              <Route path="/landing" element={<Landing />} />
+              <Route path="/home" element={<Home />} />
               <Route path="/registration" element={<Registration />} />
               <Route path="/cart" element={<Cart />} />
               <Route path='/checkout' element={<Checkout />} />

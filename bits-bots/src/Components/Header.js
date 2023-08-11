@@ -11,7 +11,7 @@ import NavCart from './NavCart';
 function Header() {
   const home = useNavigate();
   const handleClick = () => {
-    home('/');
+    home('/home');
   };
 
   // let checkCart;

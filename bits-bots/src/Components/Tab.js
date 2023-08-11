@@ -6,7 +6,7 @@ const Tab = () => {
   const navigate = useNavigate();
 
   const login = () => {
-    navigate('/landing');
+    navigate('/');
   };
 
   const register = () => {

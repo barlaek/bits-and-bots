@@ -30,7 +30,7 @@ const CheckoutForm = () => {
     if(checkoutDetails) {
         localStorage.removeItem("cart");
         alert("Thank you for your order!");
-        navigate("/");
+        navigate("/home");
     }
   }
 

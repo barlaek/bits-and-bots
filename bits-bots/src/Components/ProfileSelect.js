@@ -1,7 +1,6 @@
 import React from 'react';
 import * as styled from './ProfileSelect.styles.js';
 import { useNavigate } from 'react-router-dom';
-import Logout from './Logout.js';
 import useStorage from '../Utilities/Hooks/useStorage.js';
 
 const ProfileSelect = () => {
@@ -9,11 +8,12 @@ const ProfileSelect = () => {
   const landing = useNavigate();
 
   const handleClick = () => {
-    landing('/landing');
+    landing('/');
   };
 
   const logOut = () => {
     localStorage.clear();
+    landing("/");
   };
 
   return (
