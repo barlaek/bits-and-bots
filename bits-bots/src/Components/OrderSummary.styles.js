@@ -4,10 +4,11 @@ export const Container = styled.div`
     width: 350px;
     background-color: #383838;
     border-radius: 5px;
-    margin: 15px auto;
+    margin: 5px auto;
     color: white;
     display: flex;
     flex-direction: column;
+    height: 100%;
 `;
 
 export const Summary = styled.h2`

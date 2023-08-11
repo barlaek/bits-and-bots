@@ -21,8 +21,10 @@ function Cart() {
     <styled.Container>
       <Return />
       <CartMessage cartItems={cartItems} />
-      <CartList cartItems={cartItems} />
-      <OrderSummary cartItems={cartItems} />
+      <styled.Wrapper>
+        <CartList cartItems={cartItems} />
+        <OrderSummary cartItems={cartItems} />
+      </styled.Wrapper>
     </styled.Container>
   );
 }

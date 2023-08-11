@@ -6,6 +6,9 @@ export const Container = styled.div`
     border-radius: 5px;
     margin: 10px auto;
     padding: 10px 0;
+    @media (min-width: 1100px) {
+        width: 720px;
+    }
 `;
 
 export const Title = styled.h1`
