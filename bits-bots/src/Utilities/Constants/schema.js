@@ -9,8 +9,11 @@ export const schema = yup
 
 export const checkoutSchema = yup
   .object({
-    name: yup.string().min(3).required("Please enter your name"),
-    address: yup.string().min(3).required("Please enter your address"),
-    creditCard: yup.string().min(16).required("Please enter your credit card number, 16 numbers"),
+    name: yup.string().min(3).required('Please enter your name'),
+    address: yup.string().min(3).required('Please enter your address'),
+    creditCard: yup
+      .string()
+      .min(16)
+      .required('Please enter your credit card number, 16 numbers'),
   })
-  .required()
+  .required();
