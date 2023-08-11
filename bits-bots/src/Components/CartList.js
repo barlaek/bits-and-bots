@@ -14,7 +14,9 @@ function CartList(props) {
           <styled.Image src={prop.images[0].src} alt={prop.images[0].alt} />
           <styled.Data>
             <styled.Header>{prop.name}</styled.Header>
-            <styled.Price>${parseInt(`${prop.prices.price}` / 100).toFixed(2)}</styled.Price>
+            <styled.Price>
+              ${parseInt(`${prop.prices.price}` / 100).toFixed(2)}
+            </styled.Price>
             <styled.Remove
               onClick={() =>
                 dispatch.dispatch({ type: 'removeProduct', payload: prop })

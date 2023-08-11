@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes } from 'styled-components';
 
 const rotate360 = keyframes`
   from {
@@ -15,7 +15,7 @@ const Spinner = styled.div`
   border-top: 4px solid #121212;
   border-right: 4px solid #121212;
   border-bottom: 4px solid #121212;
-  border-left: 4px solid #01F9C6;
+  border-left: 4px solid #01f9c6;
   background: transparent;
   width: 36px;
   height: 36px;

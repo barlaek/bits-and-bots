@@ -13,7 +13,7 @@ const ProfileSelect = () => {
 
   const logOut = () => {
     localStorage.clear();
-    landing("/");
+    landing('/');
   };
 
   return (

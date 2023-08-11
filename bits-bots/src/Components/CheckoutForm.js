@@ -26,20 +26,16 @@ const CheckoutForm = () => {
   }
 
   const clear = (checkoutDetails) => {
-    if(checkoutDetails) {
-        localStorage.removeItem("cart");
-        alert("Thank you for your order!");
-        navigate("/home");
+    if (checkoutDetails) {
+      localStorage.removeItem('cart');
+      alert('Thank you for your order!');
+      navigate('/home');
     }
-  }
+  };
 
   return (
     <styled.Form onSubmit={handleSubmit(onSubmit)}>
-      <styled.Input
-        type="name"
-        placeholder="Name"
-        {...register('name')}
-      />
+      <styled.Input type="name" placeholder="Name" {...register('name')} />
       <p>{errors.name?.message}</p>
       <styled.Input
         type="address"

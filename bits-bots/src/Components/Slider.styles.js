@@ -61,9 +61,9 @@ export const NavButton = styled.button`
         `}
 
   @media (min-width: 720px) {
-    top: 300px
+    top: 300px;
   }
-      
+
   @media (min-width: 1100px) {
     top: 400px;
   }

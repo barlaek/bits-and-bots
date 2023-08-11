@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-    min-height: 100vh;
+  min-height: 100vh;
 `;
 
 export const Container = styled.div`
@@ -15,6 +15,6 @@ export const Container = styled.div`
 `;
 
 export const Message = styled.h2`
-    color: white;
-    margin: 15px auto;
+  color: white;
+  margin: 15px auto;
 `;

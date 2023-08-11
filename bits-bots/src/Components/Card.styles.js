@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
 
   @media (min-width: 1100px) {
     max-width: 1100px;
-    grid-template-columns: repeat(3, 1fr)
+    grid-template-columns: repeat(3, 1fr);
   }
 `;
 

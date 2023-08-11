@@ -62,8 +62,7 @@ export const NavButton = styled.button`
           }
         `}
 
-        @media (min-width: 720px) {
-          top: 350px
-        }
-            
+  @media (min-width: 720px) {
+    top: 350px;
+  }
 `;

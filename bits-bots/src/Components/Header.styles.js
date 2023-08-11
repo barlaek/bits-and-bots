@@ -42,13 +42,12 @@ export const Ul = styled.ul`
   margin-top: 7%;
   @media (min-width: 720px) {
     margin-top: 4%;
-    margin-left: 60%
-
+    margin-left: 60%;
   }
 
   @media (min-width: 1100px) {
     margin-top: 2.5%;
-    margin-left: 80%
+    margin-left: 80%;
   }
 `;
 

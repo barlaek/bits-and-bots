@@ -9,6 +9,6 @@ export const Return = styled.button`
   background-color: #121212;
   cursor: pointer;
   @media (min-width: 1100px) {
-    margin-left: 22%; 
+    margin-left: 22%;
   }
 `;

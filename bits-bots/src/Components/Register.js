@@ -31,8 +31,8 @@ const Register = () => {
     setCurrentUser(localData);
 
     if (currentUser) {
-      alert("Thank you for registering with Bits & Bots")
-      navigate("/");
+      alert('Thank you for registering with Bits & Bots');
+      navigate('/');
     }
   }
   return (
