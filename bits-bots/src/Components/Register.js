@@ -35,7 +35,7 @@ const Register = () => {
       //   navigate('/landing');
       // }, 2000);
       alert("Thank you for registering with Bits & Bots")
-      navigate("/home");
+      navigate("/");
     }
   }
   return (

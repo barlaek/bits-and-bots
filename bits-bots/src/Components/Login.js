@@ -31,7 +31,7 @@ const Login = () => {
     if (user.email === userBody.email && user.password === userBody.password) {
       console.log('success');
       setTimeout(() => {
-        navigate('/');
+        navigate('/home');
       }, 1000);
     } else {
       return false;
