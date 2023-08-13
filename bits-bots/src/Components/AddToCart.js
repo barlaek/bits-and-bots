@@ -54,9 +54,9 @@ function AddToCart(props) {
   const onAdd = () => {
     dispatch.dispatch({ type: 'addProduct', payload: props.data });
     setTimeout(() => {
-      navigate("/cart")
-    }, 1000)
-  }
+      navigate('/cart');
+    }, 1000);
+  };
   return (
     <styled.Container>
       <styled.Header>{name}</styled.Header>
@@ -65,9 +65,7 @@ function AddToCart(props) {
         <styled.Price>${convertedPrice}</styled.Price>
       </styled.PriceContainer>
       <styled.BtnCont>
-        <styled.AddToCart onClick={onAdd}>
-          Add to cart
-        </styled.AddToCart>
+        <styled.AddToCart onClick={onAdd}>Add to cart</styled.AddToCart>
       </styled.BtnCont>
     </styled.Container>
   );
