@@ -38,7 +38,7 @@ export const LogoBtn = styled.img`
 export const Ul = styled.ul`
   display: inline-block;
   list-style-type: none;
-  margin-left: 38%;
+  margin-left: 35%;
   margin-top: 7%;
   @media (min-width: 720px) {
     margin-top: 4%;

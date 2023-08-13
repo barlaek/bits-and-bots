@@ -1,6 +1,6 @@
 # Bits & Bots
 
-![Screenshot of deployed website, Bits & Bots]("/bits-bots/src/images/bits-bots-skjermbilde.png";)
+![Screenshot of deployed website, Bits & Bots](/bits-bots/src/images/bits-bots-skjermbilde.png)
 An e-commerce application for video games built with React.js
 
 ## Description
