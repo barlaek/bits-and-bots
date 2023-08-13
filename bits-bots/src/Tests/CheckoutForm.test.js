@@ -1,20 +1,21 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import Login from '../Components/Login';
+import CheckoutForm from '../Components/CheckoutForm';
 
-describe('Login', () => {
+describe('CheckoutForm', () => {
   test('it submits data', () => {
     const onSubmit = jest.fn();
-    const user = {
-      email: 'email',
-      password: 'password',
+    const checkoutDetails = {
+      name: 'name',
+      address: 'address',
+      creditCard: 'number',
     };
     render(
       <MemoryRouter>
-        <Login onSubmit={onSubmit(user)} />
+        <CheckoutForm onSubmit={onSubmit(checkoutDetails)} />
       </MemoryRouter>,
     );
-    const submit = screen.getByDisplayValue('Login');
+    const submit = screen.getByDisplayValue('Place order');
     fireEvent.submit(submit);
     expect(onSubmit).toHaveBeenCalledTimes(1);
   });
