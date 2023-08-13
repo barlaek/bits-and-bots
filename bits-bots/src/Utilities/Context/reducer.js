@@ -79,6 +79,8 @@ export const reducer = (state, action) => {
       ];
       localStorage.setItem('cart', JSON.stringify(storedCart));
 
+      window.location.reload();
+
       newTotal = cart.reduce((currentTotal, product) => {
         currentTotal += product.discountedPrice * product.quantity;
         return currentTotal;

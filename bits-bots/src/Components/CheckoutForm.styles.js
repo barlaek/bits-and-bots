@@ -22,4 +22,5 @@ export const Submit = styled.input`
   padding: 10px 120px;
   margin: 0 10px 20px 10px;
   font-weight: bold;
+  cursor: pointer;
 `;
