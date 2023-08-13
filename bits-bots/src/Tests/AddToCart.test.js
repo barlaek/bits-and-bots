@@ -5,6 +5,14 @@ import AddToCart from "../Components/AddToCart";
 describe("AddToCart", () => {
     test("component renders correctly", () => {
         // const mockCallBack = jest.fn();
+        // const mockOnAddFn = jest.fn()
+        // const mockDispatch = ({
+        //     type: "addProduct",
+        //     payload: {
+        //         data: "data",
+        //     }
+        // })
+        // const onAdd = jest.fn(() => {mockOnAddFn(mockDispatch)});
         const data = {
             name: "name",
             prices: {
@@ -15,12 +23,12 @@ describe("AddToCart", () => {
             <MemoryRouter>
                 <AddToCart 
                     data={data}
-                    // onClick={mockCallBack}
+                    // mockCallBack={mockCallBack(onAdd)}
                 />
             </MemoryRouter>
         );
-        // const onAdd = screen.getByRole("button");
-        // fireEvent.click(onAdd);
+        // const button = screen.getByRole("button");
+        // fireEvent.click(button);
         // expect(mockCallBack).toHaveBeenCalledTimes(1);
     })
 })
