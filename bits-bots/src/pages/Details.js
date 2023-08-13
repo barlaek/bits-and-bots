@@ -37,14 +37,14 @@ function Details() {
   }
 
   return (
-    <div key={data.id}>
+    <styled.Background key={data.id}>
       <Return />
       <DetailsGallery data={data} />
       <styled.Wrapper>
         <AddToCart data={data} />
         <GameDetails data={data} />
       </styled.Wrapper>
-    </div>
+    </styled.Background>
   );
 }
 

@@ -42,4 +42,5 @@ export const CheckoutBtn = styled.button`
   border: none;
   border-radius: 5px;
   padding: 10px 120px;
+  cursor: pointer;
 `;
