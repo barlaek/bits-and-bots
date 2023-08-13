@@ -17,5 +17,9 @@ test("renders card component", () => {
   },
 ];
 
-  render(<MemoryRouter><Card filteredProductList={filteredProductList} /></MemoryRouter>)
+  render(
+    <MemoryRouter>
+      <Card filteredProductList={filteredProductList} />
+    </MemoryRouter>
+  );
 })
