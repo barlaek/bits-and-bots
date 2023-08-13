@@ -65,11 +65,7 @@ function AddToCart(props) {
         <styled.Price>${convertedPrice}</styled.Price>
       </styled.PriceContainer>
       <styled.BtnCont>
-        <styled.AddToCart onClick={onAdd}
-          // onClick={() =>
-          //   // dispatch.dispatch({ type: 'addProduct', payload: props.data })
-          // }
-        >
+        <styled.AddToCart onClick={onAdd}>
           Add to cart
         </styled.AddToCart>
       </styled.BtnCont>
