@@ -1,14 +1,17 @@
 import { fireEvent, render, screen } from '@testing-library/react';
-import Return from '../Components/Return';
-import { MemoryRouter } from 'react-router-dom';
+import Profile from '../Components/Profile';
 
-test("renders return component", () => {
+test("renders profile component", () => {
     const mockCall = jest.fn(() => {});
     const history = jest.fn();
+    const prop = {
+        image: "url"
+    }
   render(
-    <MemoryRouter>
-        <Return mockCall={mockCall(history)}/>
-    </MemoryRouter>
+        <Profile 
+            prop={prop}
+            mockCall={mockCall(history)}
+        />
   );
   const button = screen.getByRole("button");
   fireEvent.click(button);

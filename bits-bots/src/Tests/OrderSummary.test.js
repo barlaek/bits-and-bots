@@ -1,13 +1,18 @@
 import { fireEvent, render, screen } from '@testing-library/react';
-import Return from '../Components/Return';
+import OrderSummary from '../Components/OrderSummary';
 import { MemoryRouter } from 'react-router-dom';
 
-test("renders return component", () => {
+test("renders order summary component", () => {
     const mockCall = jest.fn(() => {});
     const history = jest.fn();
+    const cartItems = [{
+        cart: "item",
+    }]
   render(
     <MemoryRouter>
-        <Return mockCall={mockCall(history)}/>
+        <OrderSummary 
+            cartItems={cartItems}
+            mockCall={mockCall(history)}/>
     </MemoryRouter>
   );
   const button = screen.getByRole("button");
